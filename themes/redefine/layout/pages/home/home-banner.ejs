@@ -1,0 +1,87 @@
+<% if (theme.home_banner.style==="fixed" ) { %>
+    <style>
+        .home-banner-container {
+            background: none !important;
+        }
+
+        .home-article-item,
+        .sidebar-links,
+        .sidebar-content,
+        a.page-number,
+        a.extend,
+        .sidebar-links .links:hover,
+        .right-bottom-tools,
+        footer.footer {
+            background-color: var(--background-color-transparent-80) !important;
+        }
+
+        .right-bottom-tools:hover,
+        a.page-number:hover,
+        a.extend:hover {
+            background-color: var(--primary-color) !important;
+        }
+
+        .site-info,
+        .home-article-sticky-label {
+            background-color: var(--background-color-transparent-15) !important;
+        }
+
+        .home-article-sticky-label {
+            backdrop-filter: none !important;
+        }
+    </style>
+    <div
+        class="home-banner-background transition-fade fixed top-0 left-0 w-screen h-screen scale-125 sm:scale-110 bg-cover">
+        <img src="<%- url_for(theme.home_banner.image.light) %>" alt="home-banner-background"
+            class="w-full h-full object-cover dark:hidden">
+        <img src="<%- url_for(theme.home_banner.image.dark) %>" alt="home-banner-background"
+            class="w-full h-full object-cover hidden dark:block">
+    </div>
+    <% } %>
+
+        <div class="home-banner-container flex justify-center items-center transition-fade relative">
+            <% if (theme.home_banner.style !=="fixed" ) { %>
+                <div
+                    class="home-banner-background transition-fade absolute top-0 left-0 w-screen h-screen scale-125 sm:scale-110 bg-cover">
+                    <img src="<%- url_for(theme.home_banner.image.light) %>" alt="home-banner-background"
+                        class="w-full h-full object-cover dark:hidden">
+                    <img src="<%- url_for(theme.home_banner.image.dark) %>" alt="home-banner-background"
+                        class="w-full h-full object-cover hidden dark:block">
+                </div>
+                <% } %>
+
+                    <div class="content mt-8 flex flex-col justify-center items-center transition-fade-down">
+                        <div
+                            class="description flex flex-col justify-center items-center w-screen font-medium text-center">
+                            <%- theme.home_banner.title || theme.style.first_screen.description || config.description %>
+                                <% if (theme.home_banner.subtitle.length !==0) { %>
+                                    <p><i id="subtitle">_</i><span class="typed-cursor" aria-hidden="true"></span>
+                                    </p>
+                                    <% } %>
+                        </div>
+                    </div>
+
+                    <!-- 漂亮的箭頭 -->
+                    <a href="#author-intro" class="scroll-down-indicator" aria-label="Scroll down">
+                        <i class="fa-duotone fa-solid fa-angles-down fa-beat-fade fa-lg"
+                            style="--fa-primary-color: #d2def9; --fa-secondary-color: #6382bf; --fa-secondary-opacity: 0.6;"></i>
+                    </a>
+        </div>
+
+
+        <!-- 自訂作者介紹區塊 -->
+        <section id="author-intro" class="author-intro-section">
+            <div class="author-top">
+                <img class="author-avatar" src="/images/小東西.svg" alt="作者頭像" />
+                <div class="author-text-block">
+                    <h2 class="author-name">YEN-CHIA, FENG</h2>
+                    <div class="author-subrow">
+                        <div class="author-subname">馮妍嘉</div>
+                        <a href="/about.html" class="about-button">About Me</a>
+                    </div>
+                </div>
+            </div>
+            <p class="author-description">
+                嗨，我是 YEN-CHIA，一位熱愛創作與設計的設計師。這裡是我紀錄作品、想法與實驗的地方。嗨，我是 YEN-CHIA，一位熱愛創作與設計的設計師。這裡是我紀錄作品、想法與實驗的地方。
+            </p>
+        </section>

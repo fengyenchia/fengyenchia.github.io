@@ -1,0 +1,711 @@
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 開始
+# THEME REDEFINE 設定檔 V2
+# 作者：EVANNOTFOUND
+# GitHub: https://github.com/EvanNotFound/hexo-theme-redefine
+# 文件說明: https://redefine-docs.ohevan.com
+# 範例網站: https://redefine.ohevan.com
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 結束
+
+
+# 基本資訊 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 開始
+# 文件說明: https://redefine-docs.ohevan.com/basic/info
+info:
+  # 網站標題（顯示在左上角）
+  title: YEN CHIA
+  # 網站副標題
+  subtitle: 'PAGE'
+  # 作者名稱
+  author: YEN-CHIA, FENG
+  # 網站 URL
+  url: https://fengyenchia.github.io
+# 基本資訊 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 結束
+
+# 圖片設定 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 開始
+# 文件說明: https://redefine-docs.ohevan.com/basic/defaults
+defaults:
+  # 網站 favicon 圖示
+  favicon: /images/小東西.svg
+  # 網站 Logo
+  logo: /images/小東西.svg
+  # 作者頭像
+  avatar: /images/小東西.svg
+# 圖片設定 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 結束
+
+# 主題顏色 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 開始
+# 文件說明: https://redefine-docs.ohevan.com/basic/colors
+colors:
+  # 主色
+  primary: "#A31F34"
+  # 次要色（保留設定）
+  secondary:
+  # 預設主題模式（會被使用者瀏覽器的偏好覆蓋）
+  default_mode: light # 可選：light 或 dark
+# 主題顏色 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 結束
+
+# 網站自訂化設定 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 開始
+# 文件說明: https://redefine-docs.ohevan.com/basic/global
+global:
+  # 自訂全站字體
+  fonts:
+    # 中文字體
+    chinese: 
+      enable: false # 是否啟用自訂中文字體
+      family:  # 字體名稱
+      url:  # CSS 字體連結
+    # 英文字體
+    english: 
+      enable: false # 是否啟用自訂英文字體
+      family:  # 字體名稱
+      url:  # CSS 字體連結
+    # 標題字體（導覽列、側邊欄）
+    title:
+      enable: false # 是否啟用自訂標題字體
+      family:  # 字體名稱
+      url:  # CSS 字體連結
+  # 內文最大寬度
+  content_max_width: 1000px
+  # 側邊欄寬度
+  sidebar_width: 210px
+  # 滑鼠懸停效果
+  hover:
+    shadow: true # 陰影效果
+    scale: true # 放大效果
+  # 捲動進度條
+  scroll_progress:
+    bar: true # 顯示進度條
+    percentage: true # 顯示百分比
+  # 網站計數器
+  website_counter:
+    url: https://cn.vercount.one/js # 計數器 API URL（不用修改）
+    enable: true # 啟用網站計數器
+    site_pv: true # 顯示頁面總瀏覽量（PV）
+    site_uv: true # 顯示訪客人數（UV）
+    post_pv: true # 顯示單篇文章瀏覽量
+  # 是否啟用單頁模式（使用 swup，類似 PJAX）
+  single_page: true
+  # 是否啟用載入動畫
+  preloader:
+    enable: false
+    custom_message: # 自訂訊息，若空白則顯示網站標題
+  # 是否啟用 Open Graph
+  open_graph:
+    enable: true
+    image: /images/redefine-og.webp  # 預設分享圖像
+    description: Hexo Theme Redefine, Redefine Your Hexo Journey.
+  # Google Analytics（網站流量分析）
+  google_analytics:
+    enable: false # 是否啟用
+    id:  # Google Analytics 的追蹤 ID
+# 網站自訂化設定 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 結束
+    
+
+# FONTAWESOME 字型圖示設定 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 開始
+# 文件說明：https://redefine-docs.ohevan.com/basic/fontawesome
+fontawesome: # 使用 Pro v6.2.1
+  # 精細線條版
+  thin: true
+  # 輕量版
+  light: true
+  # 雙色版
+  duotone: true
+  # 銳利實心版
+  sharp_solid: true
+
+  solid: true  # 實心版（新增）
+  regular: true  # 常規版（新增）
+# FONTAWESOME 字型圖示設定 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 結束
+
+# 首頁橫幅設定 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 開始
+# 文件說明: https://redefine-docs.ohevan.com/home/home_banner
+home_banner:
+  # 是否啟用首頁橫幅
+  enable: true
+  # 橫幅風格
+  style: fixed # 可選 static 或 fixed
+  # 首頁橫幅圖片
+  image: 
+    light: /images/wallhaven-wqery6-light.webp # 淺色模式下的圖片
+    dark: /images/wallhaven-wqery6-dark.webp # 深色模式下的圖片
+  # 首頁橫幅標題
+  title: Welcome to YEN-CHIA's portfolio.
+  # 首頁橫幅副標題（打字動畫）
+  subtitle:
+    text:
+        - "歡迎來到我的網站！"
+        - "這裡是我的創作空間～"
+        - "一起來探索吧！"
+    typing_speed: 120  # 打字速度
+    backing_speed: 150  # 刪除速度
+    starting_delay: 0  # 開始延遲（毫秒）
+    backing_delay: 0  # 開始刪除前的延遲
+    loop: true  # 是否循環播放
+    smart_backspace: true  # 智慧刪除（保留相同部分）
+
+  # 首頁橫幅文字顏色
+  text_color: 
+    light: "#F2F2F2" # 淺色模式文字顏色
+    dark: "#d1d1b6" # 深色模式文字顏色
+  # 首頁橫幅文字樣式
+  text_style: 
+    # 標題字體大小
+    title_size: 2.8rem
+    # 副標題字體大小
+    subtitle_size: 1.5rem
+    # 標題與副標題間距
+    line_height: 1.2
+  # 自訂首頁橫幅字體
+  custom_font: 
+    # 是否啟用自訂字體
+    enable: false
+    # 字體名稱
+    family: 
+    # 字體的 CSS 連結
+    url:
+  # 首頁橫幅社群連結
+  social_links:
+    # 是否啟用
+    enable: true
+    # 社群連結樣式
+    style: default # 可選 default、reverse、center
+    # 社群連結列表
+    links:
+      github: https://github.com/fengyenchia/fengyenchia.github.io.git  # 你的 GitHub 網址
+      instagram: https://www.instagram.com/yenchia._.0504/?hl=zh-tw # 你的 Instagram 網址
+      email: yanjia20050504@gmail.com  # 你的電子郵件
+      # ...... # 你可以新增更多項目
+  # 首頁橫幅按鈕
+  buttons:
+    # 是否啟用
+    enable: true
+##################################這裡還沒用####################啊啊啊啊啊啊啊啊啊啊######################### 
+##################################這裡還沒用####################啊啊啊啊啊啊啊啊啊啊#########################
+##################################這裡還沒用####################啊啊啊啊啊啊啊啊啊啊#########################   
+    # 按鈕列表
+    list:
+      - text: 作品集
+        url: /portfolio # 按鈕文字與連結
+        icon: fa-solid fa-briefcase # 按鈕圖示
+      - text: 關於我
+        url: /about # 按鈕文字與連結
+        icon: fa-solid fa-user # 按鈕圖示
+      - text: 聯絡我
+        url: /contact # 按鈕文字與連結
+        icon: fa-solid fa-envelope # 按鈕圖示
+# 首頁橫幅設定 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 結束
+
+# 導覽列 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 開始
+# 文件說明：https://redefine-docs.ohevan.com/home/navbar
+navbar:
+  # 是否自動隱藏導覽列
+  auto_hide: false
+  # 導覽列背景顏色
+  color:
+    left: "#f78736" # 左側顏色
+    right: "#367df7"  # 右側顏色
+    transparency: 35 # 透明度百分比（10-99）
+  # 導覽列寬度（通常不需修改）
+  width:
+    home: 1200px # 首頁寬度
+    pages: 1000px # 其他頁面寬度
+  # 導覽列連結
+  links:
+    Home: 
+      path: / 
+      icon: fa-regular fa-house # 可留空
+    # Archives: 
+    #   path: /archives 
+    #   icon: fa-regular fa-archive # 可留空
+    # Status: 
+    #   path: https://status.ohevan.com/
+    #   icon: fa-regular fa-chart-bar
+    About: 
+       icon: /images/小東西.svg
+       submenus:
+         Me: /about
+         Github: https://github.com/fengyenchia/fengyenchia.github.io.git
+         instagram: https://www.instagram.com/yenchia._.0504/?hl=zh-tw
+         Blog: https://ohevan.com
+    #     Friends: /friends
+    # Links: 
+    #   icon: fa-regular fa-link
+    #   submenus:
+    #     Link1: /link1
+    #     Link2: /link2
+    #     Link3: /link3
+    # ...... # 可加入更多
+  # 導覽列搜尋（本地搜尋）。需安裝 hexo-generator-searchdb（npm i hexo-generator-searchdb）。說明：https://github.com/theme-next/hexo-generator-searchdb
+  search:
+    # 是否啟用搜尋
+    enable: false
+    # 是否在頁面載入時預載搜尋資料
+    preload: true
+# 導覽列 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 結束
+
+
+# 首頁文章設定 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 開始
+# 文件說明：https://redefine-docs.ohevan.com/home/home
+home:
+  # 側邊欄設定
+  sidebar:
+    enable: true # 是否啟用側邊欄
+    position: left # 側邊欄位置：left 或 right
+    first_item: info # 側邊欄第一項：menu 或 info
+    announcement: 作者介紹 # 公告文字
+    show_on_mobile: true # 手機版是否顯示側邊欄導覽
+    links:
+      # Archives: 
+      #   path: /archives 
+      #   icon: fa-regular fa-archive # 可留空
+      # Tags: 
+      #   path: /tags 
+      #   icon: fa-regular fa-tags # 可留空
+      # Categories: 
+      #   path: /categories 
+      #   icon: fa-regular fa-folder # 可留空
+      # ...... # 可加入更多
+  # 文章日期格式
+  article_date_format: auto # auto, relative, YYYY-MM-DD, YYYY-MM-DD HH:mm:ss 等
+  # 文章摘要長度
+  excerpt_length: 200 # 文章摘要最大長度
+  # 顯示文章分類
+  categories:
+    enable: true  # 是否啟用
+    limit: 3 # 顯示最大分類數
+  # 顯示文章標籤
+  tags:
+    enable: true  # 是否啟用
+    limit: 3  # 顯示最大標籤數
+# 首頁文章設定 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 結束
+
+# 文章設定 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 開始
+# 文件說明：https://redefine-docs.ohevan.com/posts/articles
+articles:
+  # 文章樣式設定
+  style:
+    font_size: 16px # 字體大小
+    line_height: 1.5 # 行距
+    image_border_radius: 14px # 圖片圓角半徑
+    image_alignment: center # 圖片對齊方式：left 或 center
+    image_caption: false # 是否顯示圖片說明文字
+    link_icon: true # 是否顯示連結圖示
+    delete_mask: false # 為 <del> 標籤加上遮罩效果，預設隱藏內容，滑鼠懸停時顯示
+    title_alignment: left # 標題對齊方式：left 或 center
+    headings_top_spacing: # 各級標題上方間距
+      h1: 3.2rem
+      h2: 2.4rem
+      h3: 1.9rem
+      h4: 1.6rem
+      h5: 1.4rem
+      h6: 1.3rem
+  # 字數統計。需安裝 hexo-wordcount（npm install hexo-wordcount）。說明：https://github.com/willin/hexo-wordcount
+  word_count:
+    enable: true # 是否啟用
+    count: true # 是否顯示總字數
+    min2read: true # 是否顯示閱讀時間
+  # 作者標籤
+  author_label: 
+    enable: true # 是否啟用
+    auto: false # 是否自動產生作者等級標籤，例如 Lv1, Lv2, Lv3...
+    list: []
+  # 程式碼區塊設定
+  code_block:
+    copy: true # 是否啟用複製按鈕
+    style: mac # mac 或 simple
+    highlight_theme: # highlightjs 語法高亮主題。預覽：https://highlightjs.org/examples
+      light: github # 淺色主題，支援：github、atom-one-light、default
+      dark: vs2015 # 深色主題，支援：github-dark、monokai-sublime、vs2015、night-owl、atom-one-dark、nord、tokyo-night-dark、a11y-dark、agate
+    font: # 自訂程式碼字體
+      enable: false # 是否啟用
+      family: # 字體名稱
+      url: # CSS 字體檔 URL
+  # 目錄設定
+  toc:
+    enable: true # 是否啟用目錄
+    max_depth: 3 # 最大目錄深度
+    number: false # 是否自動加上編號
+    expand: true # 是否展開目錄
+    init_open: true # 預設展開目錄
+  # 版權說明設定
+  copyright:
+    enable: true # 是否啟用
+    default: cc_by_nc_sa # 預設授權，可選：cc_by_nc_sa, cc_by_nd, cc_by_nc, cc_by_sa, cc_by, all_rights_reserved, public_domain
+  # 是否啟用圖片延遲載入
+  lazyload: true
+  # 啟用 Pangu.js，自動在中英文之間加入空格。說明：https://github.com/vinta/pangu.js
+  pangu_js: true
+  # 推薦文章。需安裝 nodejieba（npm install nodejieba）。移植自 hexo-theme-volantis。
+  recommendation:
+    enable: false # 是否啟用推薦文章
+    title: 推荐阅读 # 推薦文章標題
+    limit: 3 # 顯示最大篇數
+    mobile_limit: 2 # 手機最大篇數
+    placeholder: /images/wallhaven-wqery6-light.webp # 預設封面圖
+    skip_dirs: [] # 略過目錄
+# 文章設定 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 結束
+
+
+# 留言系統 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 開始
+# 文件說明：https://redefine-docs.ohevan.com/posts/comment
+comment:
+  # 是否啟用留言系統
+  enable: true
+  # 留言系統平台
+  system: waline # 可選：waline, gitalk, twikoo, giscus
+  # 系統設定
+  config:
+    # Waline 設定。說明：https://waline.js.org/
+    waline:
+      serverUrl: https://example.example.com # Waline 伺服器網址，例如 https://example.example.com
+      lang: zh-TW # Waline 語言，例如 zh-CN, en-US。參考：https://waline.js.org/guide/client/i18n.html
+      emoji: [] # 表情圖示，參考：https://waline.js.org/guide/features/emoji.html
+      recaptchaV3Key: # Google reCAPTCHA v3 金鑰
+      turnstileKey: # Turnstile 金鑰
+      reaction: false # 是否啟用回應功能，參考：https://waline.js.org/reference/client/props.html#reaction
+    # Gitalk 設定。說明：https://github.com/gitalk/gitalk
+    gitalk:
+      clientID: # GitHub 應用程式 Client ID
+      clientSecret: # GitHub 應用程式 Client Secret
+      repo: # GitHub 儲存庫
+      owner: # GitHub 擁有者
+      proxy: # GitHub 代理伺服器
+    # Twikoo 設定。說明：https://twikoo.js.org/
+    twikoo:
+      version: 1.6.10 # Twikoo 版本，不懂請勿修改
+      server_url: # Twikoo 伺服器網址
+      region: # Twikoo 區域，可留空
+    # Giscus 設定。說明：https://giscus.app/
+    giscus:
+      repo: # GitHub 儲存庫名稱，例如 EvanNotFound/hexo-theme-redefine
+      repo_id: # GitHub 儲存庫 ID
+      category: # 討論分類
+      category_id: # 討論分類 ID
+      mapping: pathname # 使用哪個欄位作為識別，建議使用 pathname。PJAX 模式下請勿使用 og:title
+      strict: 0 # 是否啟用嚴格模式（0 或 1）
+      reactions_enabled: 1 # 是否啟用表情回應
+      emit_metadata: 0 # 是否發出元資料
+      lang: en # Giscus 語言
+      input_position: bottom # 留言框位置：top 或 bottom
+      loading: lazy # 是否延遲載入
+# 留言系統 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 結束
+
+
+# 頁尾設定 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 開始
+# 文件說明：https://redefine-docs.ohevan.com/footer
+footer:
+  # 是否顯示網站運行時間
+  runtime: true
+  # 頁尾圖示，請寫入 fontawesome 語法
+  icon: '<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>'
+  # 網站啟用起始時間，格式：YYYY/MM/DD HH:mm:ss
+  start: 2025/6/19 12:00:00
+  # 是否顯示站點統計（總文章數、總字數）
+  statistics: true
+  # 頁尾自訂訊息
+  customize:
+  # ICP 備案號。參考：https://beian.miit.gov.cn/
+  icp:
+    enable: false # 是否啟用
+    number: # 備案號
+    url: # 備案連結
+# 頁尾設定 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 結束
+
+# 注入設定 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 開始
+# 文件說明：https://redefine-docs.ohevan.com/inject
+inject:
+  enable: true
+  head:
+    - >
+      <!-- (作者頭像 漂浮動畫) -->
+      <style>
+        .avatar > img {       
+          width: 150px !important;
+          height: 150px !important;
+          border-radius: 50% !important;
+          border: 5px solid #fff !important;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+          object-fit: cover !important;
+          animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+          0% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+          100% { transform: translateY(0); }
+        }
+      </style>
+
+      <!-- 打字動畫 -->
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <style>
+        /* 首頁副標題樣式設定 */
+        #subtitle {
+          font-size: 1.6rem;              /* 字體大小 */
+          font-weight: 450;              /* 字體粗細，介於 regular 與 bold 之間 */
+          color: #F2F2F2;                /* 字體顏色為白色 */
+          animation: fadeInUp 0.2s ease-out forwards; /* 淡入上移動畫效果 */
+          white-space: nowrap;           /* 不換行，單行顯示打字效果 */
+        }
+
+        /* 打字時閃爍的游標樣式 */
+        .typed-cursor {
+          font-weight: 400;
+          font-size: 1.6rem;
+          color: #F2F2F2;
+          animation: blink 0.9s infinite; /* 游標閃爍動畫 */
+        }
+
+        /* 游標閃爍動畫定義 */
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+        }
+
+        /* 標題淡入並向上移動的動畫定義 */
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);  /* 從下方20px開始 */
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);     /* 回到原位 */
+          }
+        }
+      </style>
+
+      <!-- 啟用打字效果的 JavaScript 程式碼 -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const subtitleEl = document.getElementById("subtitle");
+          
+          // 避免重複初始化（多次觸發的話會產生多個動畫）
+          if (subtitleEl && !subtitleEl.dataset.initiated) {
+            subtitleEl.dataset.initiated = true;
+
+            // 初始化 Typed.js 並套用打字動畫參數
+            new Typed("#subtitle", {
+              strings: ["歡迎來到我的網站！", "歡迎來到我的網站！", "這裡是我的創作空間～", "一起來探索吧！"], // 顯示的字串內容陣列
+              typeSpeed: 150,    // 打字速度（毫秒）
+              backSpeed: 120,    // 刪除速度
+              startDelay: 0,   // 初始延遲(不延遲，立即開始打字)
+              backDelay: 2000,   // 完整顯示後延遲多久才刪除(每句話顯示後等待 2 秒再刪除)
+              loop: true,        // 是否持續循環打字
+              smartBackspace: false, // 智慧刪除（只有變化的部分會被刪除）
+              showCursor: true,  // 顯示閃爍游標
+              cursorChar: "|"    // 游標字元樣式，可改為 "|" 或 "▋"
+            });
+          }
+        });
+      </script>
+      
+      <!-- (作者介紹區塊) -->
+      <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 找箭頭元素（你 HTML 需有 class scroll-down-indicator 的箭頭按鈕）
+        const arrow = document.querySelector(".scroll-down-indicator");
+        const authorSection = document.querySelector(".author-intro-section");
+
+        if (arrow && authorSection) {
+          // 點箭頭時，平滑滾動到作者介紹區塊
+          arrow.addEventListener("click", e => {
+            e.preventDefault();
+            authorSection.scrollIntoView({ behavior: "smooth" });
+          });
+
+          // 監聽滾動，作者區塊出現時加 class 觸發淡入動畫
+          function checkVisible() {
+            const rect = authorSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              authorSection.classList.add("visible");
+              window.removeEventListener("scroll", checkVisible);
+            }
+          }
+          window.addEventListener("scroll", checkVisible);
+          checkVisible(); // 頁面載入就檢查一次
+        }
+      });
+      </script>
+
+      <style>
+      /* 作者介紹區塊(整個卡片樣式) */
+      .author-intro-section {
+        display: flex;
+        flex-direction: column;    /* 整體排版方向：垂直 */
+        align-items: center;        /* 讓內部內容水平置中 */
+        padding: 100px 100px;        /* 上下內邊距 */
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(245, 245, 245, 0.05));
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 30px;
+        max-width: 95%;
+        margin: 60px auto; /* 上下外邊距，並置中 */
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .author-intro-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* 作者介紹區塊(上半部區塊內容) */
+      .author-top {
+        display: flex;
+        align-items: center;
+        gap: 200px;      /* 內部元素間距 */
+        margin-bottom: 40px; /* 下方間距 */
+        flex-wrap: wrap; /* 允許換行 */
+        justify-content: center;  /* 內容置中 */
+      }
+
+      /* 作者介紹區塊(左側頭像) */
+      .author-avatar {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover; /* 圖片填滿圓形 */
+        border: 5px solid #F2F2F2;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .author-text-block {
+        display: flex;
+        flex-direction: column; /* 文字區塊垂直排列 */
+        align-items: flex-start;  /* 左對齊 */
+      }
+
+      /* 作者名稱 */
+      .author-name {
+        font-size: 50px;
+        font-weight: 700;   /* 粗體 */
+        color: #F2F2F2;
+        margin-bottom: 6px;
+      }
+
+      /* 作者副標題 */
+      .author-subname {
+        font-size: 40px;
+        font-weight: 500; /* 中等粗細 */
+        color: #F2F2F2;
+      }
+
+      /* 作者介紹區塊(下半部區塊內容) */
+      .author-description {
+        font-size: 20px;
+        line-height: 1.6; /* 行距 */
+        color: #D6D6D6;
+        max-width: 900px;
+        text-align: left; /* 左對齊 */
+      }
+
+      /* 作者介紹區塊(button內容) */
+      .author-subrow {
+        display: flex;
+        justify-content: space-between;   /* 內容左右分布 */
+        align-items: center; /* 文字垂直置中 */
+        width: 100%;  /* 佔滿整行 */
+        max-width: 550px;                 /* 提高最大寬度，拉開距離 */
+        padding: 0 0px;                  /* 左右內距可以微調對齊感 */
+        margin-bottom: 8px;              /* 與下方描述區塊距離 */
+      }
+      .about-button {
+        padding: 10px 15px; /* 上下左右內邊距 */
+        font-size: 20px; /* 字體大小 */
+        font-weight: 550; /* 中等粗細 */
+        color: #F2F2F2;  /* 按鈕文字顏色 */
+        background-color: #3A4D7E;  /* 按鈕背景色 */
+        display: inline-block; /* 讓按鈕呈現為行內塊元素 */
+        cursor: pointer; /* 鼠標變為手形 */
+        border-radius: 14px; /* 按鈕圓角 */
+        text-decoration: none;  /* 無下劃線 */
+        transition: background-color 0.3s ease; /* 懸停時背景色變化動畫 */
+      }
+
+      .about-button:hover {
+        background-color: #506BAF; /* 懸停時變色 */
+        color: #fff;  /* 按鈕文字顏色 */
+      }
+      </style>
+          
+      <!-- (下滑箭頭動畫與滾動優化) -->
+      <style>
+        .scroll-down-indicator {
+          position: absolute;
+          bottom: 80px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 10;
+          animation: bounce 2s infinite;
+          font-size: 2.5rem;
+        }
+
+        @keyframes bounce {
+          0%, 100% { transform: translateX(-50%) translateY(0); }
+          50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        html {
+          scroll-behavior: smooth;
+        }
+      </style>   
+
+  footer:
+    -
+    -
+# 注入設定 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 結束
+
+# 外掛設定 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 開始
+# 文件說明：https://redefine-docs.ohevan.com/plugins
+plugins:
+  # RSS 訂閱。需安裝 hexo-generator-feed（npm i hexo-generator-feed）。說明：https://github.com/hexojs/hexo-generator-feed
+  feed:
+    enable: false # 是否啟用
+  # Aplayer 音樂播放器。說明：https://github.com/DIYgod/APlayer
+  aplayer:
+    enable: false # 是否啟用
+    type: fixed # 顯示類型：fixed 或 mini
+    audios:
+      - name: # 音樂名稱
+        artist: # 演出者
+        url: # 音樂連結
+        cover: # 封面連結
+        lrc: # 歌詞連結
+#      - name: # 音樂名稱
+#        artist: # 演出者
+#        url: # 音樂連結
+#        cover: # 封面連結
+#        lrc: # 歌詞連結
+      # ...... 可加入更多音樂
+  # Mermaid 圖表。需安裝 hexo-filter-mermaid-diagrams。說明：https://mermaid.js.org/
+  mermaid:
+    enable: false # 是否啟用
+    version: "11.4.1" # 預設為 v11.4.1
+# 外掛設定 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 結束
+
+# 頁面模板 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 開始
+# 文件說明：https://redefine-docs.ohevan.com/page_templates
+page_templates:
+  # 友鏈頁面欄數
+  friends_column: 2
+  # 標籤頁面樣式
+  tags_style: blur # 可選：blur, cloud
+# 頁面模板 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 結束
+
+# CDN 設定 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 開始
+# 文件說明：https://redefine-docs.ohevan.com/cdn
+cdn:
+  enable: true # 是否啟用 CDN
+  provider: npmmirror # CDN 提供商：npmmirror, zstatic, cdnjs, jsdelivr, unpkg, custom
+  custom_url: # 自訂 CDN 網址（格式範例見下方）
+  # 格式範例：https://cdn.custom.com/hexo-theme-redefine/${version}/source/${path}
+  # ${path} 必須指向主題的 source 資料夾根目錄
+# CDN 設定 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 結束
+
+# 開發者模式 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 開始
+# 文件說明：https://redefine-docs.ohevan.com/developer
+developer:
+  # 是否啟用開發者模式（僅供開發者修改主題原始碼，一般使用者請勿啟用）
+  enable: false
+# 開發者模式 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 結束
