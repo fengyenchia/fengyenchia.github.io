@@ -49,7 +49,7 @@
     
     <title>
         
-            YEN CHIA - Redefine Your Hexo Journey.
+            YEN CHIA - PAGE
         
     </title>
 
@@ -62,10 +62,10 @@
                 
                     <!-- (作者頭像 漂浮動畫) --> <style>
   .avatar > img {       
-    width: 120px !important;
-    height: 120px !important;
+    width: 150px !important;
+    height: 150px !important;
     border-radius: 50% !important;
-    border: 2px solid #fff !important;
+    border: 5px solid #fff !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
     object-fit: cover !important;
     animation: float 3s ease-in-out infinite;
@@ -77,60 +77,173 @@
     100% { transform: translateY(0); }
   }
 </style>
-<!-- 打字效果 --> <script data-swup-reload-script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<style>
+<!-- 打字動畫 --> <script data-swup-reload-script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> <style>
+  /* 首頁副標題樣式設定 */
   #subtitle {
-    font-size: 1.6rem;
-    font-weight: 450;   /*字體粗細為中等偏粗*/
-    color: #ffffff; /* 純白字 */
-    animation: fadeInUp 1s ease-out forwards;
-    white-space: nowrap;
+    font-size: 1.6rem;              /* 字體大小 */
+    font-weight: 450;              /* 字體粗細，介於 regular 與 bold 之間 */
+    color: #F2F2F2;                /* 字體顏色為白色 */
+    animation: fadeInUp 0.2s ease-out forwards; /* 淡入上移動畫效果 */
+    white-space: nowrap;           /* 不換行，單行顯示打字效果 */
   }
 
+  /* 打字時閃爍的游標樣式 */
   .typed-cursor {
     font-weight: 400;
     font-size: 1.6rem;
-    color: #ffffff;
-    animation: blink 0.9s infinite;
+    color: #F2F2F2;
+    animation: blink 0.9s infinite; /* 游標閃爍動畫 */
   }
 
+  /* 游標閃爍動畫定義 */
   @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
   }
 
+  /* 標題淡入並向上移動的動畫定義 */
   @keyframes fadeInUp {
     0% {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(20px);  /* 從下方20px開始 */
     }
     100% {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0);     /* 回到原位 */
     }
   }
 </style>
-<script>
+<!-- 啟用打字效果的 JavaScript 程式碼 --> <script>
   document.addEventListener("DOMContentLoaded", function () {
     const subtitleEl = document.getElementById("subtitle");
+    
+    // 避免重複初始化（多次觸發的話會產生多個動畫）
     if (subtitleEl && !subtitleEl.dataset.initiated) {
       subtitleEl.dataset.initiated = true;
-      
-      // 直接寫入字串陣列，或用其他方式傳入
+
+      // 初始化 Typed.js 並套用打字動畫參數
       new Typed("#subtitle", {
-        strings: ["歡迎來到我的個人網站！"],
-        typeSpeed: 120,
-        backSpeed: 80,
-        startDelay: 500,
-        backDelay: 1000,
-        loop: true,
-        smartBackspace: true,
-        showCursor: true,
-        cursorChar: "_"
+        strings: ["歡迎來到我的網站！", "歡迎來到我的網站！", "這裡是我的創作空間～", "一起來探索吧！"], // 顯示的字串內容陣列
+        typeSpeed: 150,    // 打字速度（毫秒）
+        backSpeed: 120,    // 刪除速度
+        startDelay: 0,   // 初始延遲(不延遲，立即開始打字)
+        backDelay: 2000,   // 完整顯示後延遲多久才刪除(每句話顯示後等待 2 秒再刪除)
+        loop: true,        // 是否持續循環打字
+        smartBackspace: false, // 智慧刪除（只有變化的部分會被刪除）
+        showCursor: true,  // 顯示閃爍游標
+        cursorChar: "|"    // 游標字元樣式，可改為 "|" 或 "▋"
       });
     }
   });
 </script>
+<!-- (作者介紹區塊) --> <script> document.addEventListener("DOMContentLoaded", function () {
+  // 找箭頭元素（你 HTML 需有 class scroll-down-indicator 的箭頭按鈕）
+  const arrow = document.querySelector(".scroll-down-indicator");
+  const authorSection = document.querySelector(".author-intro-section");
+
+  if (arrow && authorSection) {
+    // 點箭頭時，平滑滾動到作者介紹區塊
+    arrow.addEventListener("click", e => {
+      e.preventDefault();
+      authorSection.scrollIntoView({ behavior: "smooth" });
+    });
+
+    // 監聽滾動，作者區塊出現時加 class 觸發淡入動畫
+    function checkVisible() {
+      const rect = authorSection.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        authorSection.classList.add("visible");
+        window.removeEventListener("scroll", checkVisible);
+      }
+    }
+    window.addEventListener("scroll", checkVisible);
+    checkVisible(); // 頁面載入就檢查一次
+  }
+}); </script>
+<style> /* 作者介紹區塊(整個卡片樣式) */ .author-intro-section {
+  display: flex;
+  flex-direction: column;    /* 整體排版方向：垂直 */
+  align-items: center;        /* 讓內部內容水平置中 */
+  padding: 100px 100px;        /* 上下內邊距 */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(245, 245, 245, 0.05));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 30px;
+  max-width: 95%;
+  margin: 60px auto; /* 上下外邊距，並置中 */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.author-intro-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* 作者介紹區塊(上半部區塊內容) */ .author-top {
+  display: flex;
+  align-items: center;
+  gap: 200px;      /* 內部元素間距 */
+  margin-bottom: 40px; /* 下方間距 */
+  flex-wrap: wrap; /* 允許換行 */
+  justify-content: center;  /* 內容置中 */
+}
+/* 作者介紹區塊(左側頭像) */ .author-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover; /* 圖片填滿圓形 */
+  border: 5px solid #F2F2F2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.author-text-block {
+  display: flex;
+  flex-direction: column; /* 文字區塊垂直排列 */
+  align-items: flex-start;  /* 左對齊 */
+}
+/* 作者名稱 */ .author-name {
+  font-size: 50px;
+  font-weight: 700;   /* 粗體 */
+  color: #F2F2F2;
+  margin-bottom: 6px;
+}
+/* 作者副標題 */ .author-subname {
+  font-size: 40px;
+  font-weight: 500; /* 中等粗細 */
+  color: #F2F2F2;
+}
+/* 作者介紹區塊(下半部區塊內容) */ .author-description {
+  font-size: 20px;
+  line-height: 1.6; /* 行距 */
+  color: #D6D6D6;
+  max-width: 900px;
+  text-align: left; /* 左對齊 */
+}
+/* 作者介紹區塊(button內容) */ .author-subrow {
+  display: flex;
+  justify-content: space-between;   /* 內容左右分布 */
+  align-items: center; /* 文字垂直置中 */
+  width: 100%;  /* 佔滿整行 */
+  max-width: 550px;                 /* 提高最大寬度，拉開距離 */
+  padding: 0 0px;                  /* 左右內距可以微調對齊感 */
+  margin-bottom: 8px;              /* 與下方描述區塊距離 */
+} .about-button {
+  padding: 10px 15px; /* 上下左右內邊距 */
+  font-size: 20px; /* 字體大小 */
+  font-weight: 550; /* 中等粗細 */
+  color: #F2F2F2;  /* 按鈕文字顏色 */
+  background-color: #3A4D7E;  /* 按鈕背景色 */
+  display: inline-block; /* 讓按鈕呈現為行內塊元素 */
+  cursor: pointer; /* 鼠標變為手形 */
+  border-radius: 14px; /* 按鈕圓角 */
+  text-decoration: none;  /* 無下劃線 */
+  transition: background-color 0.3s ease; /* 懸停時背景色變化動畫 */
+}
+.about-button:hover {
+  background-color: #506BAF; /* 懸停時變色 */
+  color: #fff;  /* 按鈕文字顏色 */
+} </style>
+    
 <!-- (下滑箭頭動畫與滾動優化) --> <style>
   .scroll-down-indicator {
     position: absolute;
@@ -150,7 +263,7 @@
   html {
     scroll-behavior: smooth;
   }
-</style>
+</style>   
 
                 
     
@@ -175,7 +288,7 @@
 
     <script id="hexo-configurations">
     window.config = {"hostname":"fengyenchia.github.io","root":"/","language":"zh-TW"};
-    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Welcome to YEN-CHIA's portfolio","subtitle":{"text":["歡迎來到我的個人網站！"],"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":false,"smart_backspace":false},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Welcome to YEN-CHIA's portfolio.","subtitle":{"text":["歡迎來到我的網站！","這裡是我的創作空間～","一起來探索吧！"],"typing_speed":120,"backing_speed":150,"starting_delay":0,"backing_delay":0,"loop":true,"smart_backspace":true},"text_color":{"light":"#F2F2F2","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","email":"yanjia20050504@gmail.com"}},"buttons":{"enable":true,"list":[{"text":"作品集","url":"/portfolio","icon":"fa-solid fa-briefcase"},{"text":"關於我","url":"/about","icon":"fa-solid fa-user"},{"text":"聯絡我","url":"/contact","icon":"fa-solid fa-envelope"}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"About":{"icon":"/images/小東西.svg","submenus":{"Me":"/about","Github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","Blog":"https://ohevan.com"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"作者介紹","show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2025/6/19 12:00:00"};
     window.lang_ago = {"second":"%s 秒前","minute":"%s 分鐘前","hour":"%s 小時前","day":"%s 天前","week":"%s 周前","month":"%s 個月前","year":"%s 年前"};
     window.data = {"masonry":false};
   </script>
@@ -203,6 +316,8 @@
 
 <body>
 	<div class="progress-bar-container">
+	
+	<span class="scroll-progress-bar"></span>
 	
 
 	
@@ -263,11 +378,10 @@
                     <div class="content mt-8 flex flex-col justify-center items-center transition-fade-down">
                         <div
                             class="description flex flex-col justify-center items-center w-screen font-medium text-center">
-                            Welcome to YEN-CHIA's portfolio
+                            Welcome to YEN-CHIA's portfolio.
                                 
-                                    <p><i id="subtitle">
-                                            歡迎來到我的個人網站！
-                                        </i></p>
+                                    <p><i id="subtitle">_</i><span class="typed-cursor" aria-hidden="true"></span>
+                                    </p>
                                     
                         </div>
                     </div>
@@ -279,16 +393,22 @@
                     </a>
         </div>
 
-        <!-- 作者介紹區塊 -->
-        <section id="author-intro"
-            class="author-intro w-full flex justify-center items-center py-20 bg-[#fefefe] dark:bg-[#1c1c1c]">
-            <div class="max-w-4xl text-center px-4">
-                <h2 class="text-3xl font-bold text-primary mb-4">關於我</h2>
-                <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                    嗨，我是 YEN-CHIA，一位熱愛創作與設計的開發者／藝術家。<br>
-                    本站是我的個人作品集，歡迎點選下方文章探索更多！
-                </p>
+
+        <!-- 自訂作者介紹區塊 -->
+        <section id="author-intro" class="author-intro-section">
+            <div class="author-top">
+                <img class="author-avatar" src="/images/小東西.svg" alt="作者頭像" />
+                <div class="author-text-block">
+                    <h2 class="author-name">YEN-CHIA, FENG</h2>
+                    <div class="author-subrow">
+                        <div class="author-subname">馮妍嘉</div>
+                        <a href="/about.html" class="about-button">About Me</a>
+                    </div>
+                </div>
             </div>
+            <p class="author-description">
+                嗨，我是 YEN-CHIA，一位熱愛創作與設計的設計師。這裡是我紀錄作品、想法與實驗的地方。嗨，我是 YEN-CHIA，一位熱愛創作與設計的設計師。這裡是我紀錄作品、想法與實驗的地方。
+            </p>
         </section>
 							
 
@@ -331,6 +451,51 @@
                                 
                             </li>
                     
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="/images/小東西.svg fa-fw"></i>
+                                    關於
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://github.com/fengyenchia/fengyenchia.github.io.git">
+                                                    GITHUB
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://www.instagram.com/yenchia._.0504/?hl=zh-tw">
+                                                    INSTAGRAM
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://ohevan.com">
+                                                    BLOG
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
                     
                 </ul>
             </div>
@@ -368,6 +533,50 @@
                         
                     </li>
             
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                關於
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://github.com/fengyenchia/fengyenchia.github.io.git">GITHUB</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://www.instagram.com/yenchia._.0504/?hl=zh-tw">INSTAGRAM</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://ohevan.com">BLOG</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
 
             
             
@@ -383,7 +592,7 @@
         <div class="label text-third-text-color text-sm">分類</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">1</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -401,19 +610,18 @@
 													<div class="home-sidebar-container">
     <div class="sticky-container sticky">
         
-        
             
-            <div class="sidebar-content" >
-                <div class="avatar flex justify-center">
+                <div class="sidebar-content">
+                    <div class="avatar flex justify-center">
     <img src="/images/%E5%B0%8F%E6%9D%B1%E8%A5%BF.svg">
 </div>
-                <div class="author flex flex-col justify-center my-2.5 mx-0">
+                        <div class="author flex flex-col justify-center my-2.5 mx-0">
     <div class="name">YEN-CHIA, FENG</div>
     
         <div class="label">Lv1</div>
     
 </div>
-                <div class="statistics flex justify-around my-2.5">
+                            <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
         <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
         <div class="label text-third-text-color text-sm">標籤</div>
@@ -423,21 +631,80 @@
         <div class="label text-third-text-color text-sm">分類</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">1</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
-            </div>
-        
+                </div>
+                
+                    <div class="sidebar-links"  marginTop >
+                            <div class="site-info">
+                                <div class="site-name">
+                                    YEN CHIA
+                                </div>
+                                
+                            </div>
+                            
+                                                    <div class="announcement-outside">
+                                                        作者介紹
+                                                    </div>
+                                                    
+                    </div>
+                    
+                        
 
     </div>
 </div>
-
 														
 
 															<div class="main-content">
 																<div class="home-content-container">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2025/06/19/about/">
+                            
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            
+  
+  YEN-CHIA, FENG
+  嗨，我是 YEN-CHIA，一位熱愛創作與設計的設計師。這裡是我紀錄作品、想法與實驗的地方。
+
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Jun 19 2025 23:13:08 GMT+0800">
+                
+                    2025-06-19
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2025/06/19/about/">繼續閱讀...<span class="seo-reader-text"></span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
         
             <li class="home-article-item">
 
@@ -502,7 +769,7 @@ Qu...
         <div class="text-center">
             &copy;
             
-              <span>2022</span>
+              <span>2025</span>
               -
             
             2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">YEN-CHIA, FENG</a>
@@ -510,7 +777,7 @@ Qu...
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共 1 篇文章
+                        共 2 篇文章
                     </span>
                     
                 </p>
@@ -684,6 +951,8 @@ Qu...
 <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/moment-with-locales.min.js" data-swup-reload-script></script>
 <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/essays.js" data-swup-reload-script></script>
 
+
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/pangu.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/plugins/pangu.js" ></script>
 
 
 
