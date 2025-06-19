@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="YEN-CHIA, FENG">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+            <link rel="preconnect" href="https://registry.npmmirror.com" crossorigin>
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://fengyenchia.github.io/about/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CHIA">
+<meta property="og:url" content="https://fengyenchia.github.io/about/index.html">
+<meta property="og:site_name" content="CHIA">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://fengyenchia.github.io/images/redefine-og.webp">
+<meta property="article:published_time" content="2025-06-19T19:30:46.850Z">
+<meta property="article:modified_time" content="2025-06-19T19:30:46.850Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fengyenchia.github.io/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/%E5%B0%8F%E6%9D%B1%E8%A5%BF.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/%E5%B0%8F%E6%9D%B1%E8%A5%BF.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/%E5%B0%8F%E6%9D%B1%E8%A5%BF.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            YEN CHIA - PAGE
+        
+    </title>
+
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fonts/Chillax/chillax.css">
+
+    <!--- Inject Part-->
+    
+        
+            
+                
+                    <!-- (作者頭像 漂浮動畫) --> <style>
+  .avatar > img {       
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 50% !important;
+    border: 5px solid #fff !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+    object-fit: cover !important;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+</style>
+<!-- 打字動畫 --> <script data-swup-reload-script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> <style>
+  /* 首頁副標題樣式設定 */
+  #subtitle {
+    font-size: 1.6rem;              /* 字體大小 */
+    font-weight: 450;              /* 字體粗細，介於 regular 與 bold 之間 */
+    color: #F2F2F2;                /* 字體顏色為白色 */
+    animation: fadeInUp 0.2s ease-out forwards; /* 淡入上移動畫效果 */
+    white-space: nowrap;           /* 不換行，單行顯示打字效果 */
+  }
+
+  /* 打字時閃爍的游標樣式 */
+  .typed-cursor {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #F2F2F2;
+    animation: blink 0.9s infinite; /* 游標閃爍動畫 */
+  }
+
+  /* 游標閃爍動畫定義 */
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* 標題淡入並向上移動的動畫定義 */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);  /* 從下方20px開始 */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);     /* 回到原位 */
+    }
+  }
+</style>
+<!-- 啟用打字效果的 JavaScript 程式碼 --> <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const subtitleEl = document.getElementById("subtitle");
+    
+    // 避免重複初始化（多次觸發的話會產生多個動畫）
+    if (subtitleEl && !subtitleEl.dataset.initiated) {
+      subtitleEl.dataset.initiated = true;
+
+      // 初始化 Typed.js 並套用打字動畫參數
+      new Typed("#subtitle", {
+        strings: ["歡迎來到我的網站！", "歡迎來到我的網站！", "這裡是我的創作空間～", "一起來探索吧！"], // 顯示的字串內容陣列
+        typeSpeed: 150,    // 打字速度（毫秒）
+        backSpeed: 120,    // 刪除速度
+        startDelay: 0,   // 初始延遲(不延遲，立即開始打字)
+        backDelay: 2000,   // 完整顯示後延遲多久才刪除(每句話顯示後等待 2 秒再刪除)
+        loop: true,        // 是否持續循環打字
+        smartBackspace: false, // 智慧刪除（只有變化的部分會被刪除）
+        showCursor: true,  // 顯示閃爍游標
+        cursorChar: "|"    // 游標字元樣式，可改為 "|" 或 "▋"
+      });
+    }
+  });
+</script>
+<!-- (作者介紹區塊) --> <script> document.addEventListener("DOMContentLoaded", function () {
+  // 找箭頭元素（你 HTML 需有 class scroll-down-indicator 的箭頭按鈕）
+  const arrow = document.querySelector(".scroll-down-indicator");
+  const authorSection = document.querySelector(".author-intro-section");
+
+  if (arrow && authorSection) {
+    // 點箭頭時，平滑滾動到作者介紹區塊
+    arrow.addEventListener("click", e => {
+      e.preventDefault();
+      authorSection.scrollIntoView({ behavior: "smooth" });
+    });
+
+    // 監聽滾動，作者區塊出現時加 class 觸發淡入動畫
+    function checkVisible() {
+      const rect = authorSection.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        authorSection.classList.add("visible");
+        window.removeEventListener("scroll", checkVisible);
+      }
+    }
+    window.addEventListener("scroll", checkVisible);
+    checkVisible(); // 頁面載入就檢查一次
+  }
+}); </script>
+<style> /* 作者介紹區塊(整個卡片樣式) */ .author-intro-section {
+  display: flex;
+  flex-direction: column;    /* 整體排版方向：垂直 */
+  align-items: center;        /* 讓內部內容水平置中 */
+  padding: 100px 100px;        /* 上下內邊距 */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(245, 245, 245, 0.05));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 30px;
+  max-width: 95%;
+  margin: 60px auto; /* 上下外邊距，並置中 */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.author-intro-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* 作者介紹區塊(上半部區塊內容) */ .author-top {
+  display: flex;
+  align-items: center;
+  gap: 200px;      /* 內部元素間距 */
+  margin-bottom: 40px; /* 下方間距 */
+  flex-wrap: wrap; /* 允許換行 */
+  justify-content: center;  /* 內容置中 */
+}
+/* 作者介紹區塊(左側頭像) */ .author-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover; /* 圖片填滿圓形 */
+  border: 5px solid #F2F2F2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.author-text-block {
+  display: flex;
+  flex-direction: column; /* 文字區塊垂直排列 */
+  align-items: flex-start;  /* 左對齊 */
+}
+/* 作者名稱 */ .author-name {
+  font-size: 50px;
+  font-weight: 700;   /* 粗體 */
+  color: #F2F2F2;
+  margin-bottom: 6px;
+}
+/* 作者副標題 */ .author-subname {
+  font-size: 40px;
+  font-weight: 500; /* 中等粗細 */
+  color: #F2F2F2;
+}
+/* 作者介紹區塊(下半部區塊內容) */ .author-description {
+  font-size: 20px;
+  line-height: 1.6; /* 行距 */
+  color: #D6D6D6;
+  max-width: 900px;
+  text-align: left; /* 左對齊 */
+}
+/* 作者介紹區塊(button內容) */ .author-subrow {
+  display: flex;
+  justify-content: space-between;   /* 內容左右分布 */
+  align-items: center; /* 文字垂直置中 */
+  width: 100%;  /* 佔滿整行 */
+  max-width: 550px;                 /* 提高最大寬度，拉開距離 */
+  padding: 0 0px;                  /* 左右內距可以微調對齊感 */
+  margin-bottom: 8px;              /* 與下方描述區塊距離 */
+} .about-button {
+  padding: 10px 15px; /* 上下左右內邊距 */
+  font-size: 20px; /* 字體大小 */
+  font-weight: 550; /* 中等粗細 */
+  color: #F2F2F2;  /* 按鈕文字顏色 */
+  background-color: #3A4D7E;  /* 按鈕背景色 */
+  display: inline-block; /* 讓按鈕呈現為行內塊元素 */
+  cursor: pointer; /* 鼠標變為手形 */
+  border-radius: 14px; /* 按鈕圓角 */
+  text-decoration: none;  /* 無下劃線 */
+  transition: background-color 0.3s ease; /* 懸停時背景色變化動畫 */
+}
+.about-button:hover {
+  background-color: #506BAF; /* 懸停時變色 */
+  color: #fff;  /* 按鈕文字顏色 */
+} </style>
+    
+<!-- (下滑箭頭動畫與滾動優化) --> <style>
+  .scroll-down-indicator {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    animation: bounce 2s infinite;
+    font-size: 2.5rem;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-10px); }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+</style>   
+
+                
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/css/build/tailwind.css">
+    
+
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fonts/GeistMono/geist-mono.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fonts/Geist/geist.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"fengyenchia.github.io","root":"/","language":"zh-TW"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Welcome to YEN-CHIA's portfolio.","subtitle":{"text":["歡迎來到我的網站！","這裡是我的創作空間～","一起來探索吧！"],"typing_speed":120,"backing_speed":150,"starting_delay":0,"backing_delay":0,"loop":true,"smart_backspace":true},"text_color":{"light":"#F2F2F2","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","email":"yanjia20050504@gmail.com"}},"buttons":{"enable":true,"list":[{"text":"作品集","url":"/portfolio","icon":"fa-solid fa-briefcase"},{"text":"關於我","url":"/about","icon":"fa-solid fa-user"},{"text":"聯絡我","url":"/contact","icon":"fa-solid fa-envelope"}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"About":{"icon":"/images/小東西.svg","submenus":{"Me":"/about","Github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","Blog":"https://ohevan.com"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"作者介紹","show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2025/6/19 12:00:00"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分鐘前","hour":"%s 小時前","day":"%s 天前","week":"%s 周前","month":"%s 個月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/regular.min.css">
+    
+        <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/thin.min.css">
+    
+    
+        <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/light.min.css">
+    
+    
+        <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/duotone.min.css">
+    
+    
+        <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/sharp-solid.min.css">
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+	<span class="scroll-progress-bar"></span>
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+	
+				<main class="page-container" id="swup">
+
+					
+
+										<div class="main-content-container flex flex-col justify-between min-h-dvh">
+											<div class="main-content-header">
+												<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+                <a class="logo-image h-8 w-8 sm:w-10 sm:h-10 mr-3" href="/">
+                    <img src="/images/%E5%B0%8F%E6%9D%B1%E8%A5%BF.svg" class="w-full h-full rounded-sm">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                YEN CHIA
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首頁
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="/images/小東西.svg fa-fw"></i>
+                                    關於
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://github.com/fengyenchia/fengyenchia.github.io.git">
+                                                    GITHUB
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://www.instagram.com/yenchia._.0504/?hl=zh-tw">
+                                                    INSTAGRAM
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://ohevan.com">
+                                                    BLOG
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首頁
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                關於
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://github.com/fengyenchia/fengyenchia.github.io.git">GITHUB</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://www.instagram.com/yenchia._.0504/?hl=zh-tw">INSTAGRAM</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://ohevan.com">BLOG</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">標籤</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">分類</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+											</div>
+
+											<div class="main-content-body transition-fade-up">
+												
+
+															<div class="main-content">
+																<div class="page-template-container">
+	
+
+	
+
+	<div class="page-template-content markdown-body">
+		
+		<h1></h1>
+		
+
+		<p>��&lt; ! D O C T Y P E   h t m l &gt; <br> <br> &lt; h t m l   l a n g &#x3D; ” z h - H a n t ” &gt; <br> <br> <br> <br> &lt; h e a d &gt; <br> <br>         &lt; m e t a   c h a r s e t &#x3D; ” U T F - 8 ”   &#x2F; &gt; <br> <br>         &lt; m e t a   n a m e &#x3D; ” v i e w p o r t ”   c o n t e n t &#x3D; ” w i d t h &#x3D; d e v i c e - w i d t h ,   i n i t i a l - s c a l e &#x3D; 1 . 0 ”   &#x2F; &gt; <br> <br>         &lt; t i t l e &gt; A b o u t   M e   -   Y E N - C H I A &lt; &#x2F; t i t l e &gt; <br> <br>         &lt; s t y l e &gt; <br> <br>                 b o d y   { <br> <br>                         m a r g i n :   0 ; <br> <br>                         p a d d i n g :   0 ; <br> <br>                         f o n t - f a m i l y :   ’ H e l v e t i c a   N e u e ’ ,   s a n s - s e r i f ; <br> <br>                         b a c k g r o u n d :   l i n e a r - g r a d i e n t ( t o   b o t t o m ,   # 0 f 1 1 1 5 ,   # 1 c 1 f 2 6 ) ; <br> <br>                         c o l o r :   # F 2 F 2 F 2 ; <br> <br>                 } <br> <br> <br> <br>                 . c o n t a i n e r   { <br> <br>                         m a x - w i d t h :   9 0 0 p x ; <br> <br>                         m a r g i n :   1 0 0 p x   a u t o ; <br> <br>                         p a d d i n g :   6 0 p x   4 0 p x ; <br> <br>                         b a c k g r o u n d :   r g b a ( 2 5 5 ,   2 5 5 ,   2 5 5 ,   0 . 0 5 ) ; <br> <br>                         b o r d e r - r a d i u s :   2 4 p x ; <br> <br>                         b a c k d r o p - f i l t e r :   b l u r ( 2 0 p x ) ; <br> <br>                         - w e b k i t - b a c k d r o p - f i l t e r :   b l u r ( 2 0 p x ) ; <br> <br>                         b o x - s h a d o w :   0   1 2 p x   4 0 p x   r g b a ( 0 ,   0 ,   0 ,   0 . 3 ) ; <br> <br>                         t e x t - a l i g n :   c e n t e r ; <br> <br>                 } <br> <br> <br> <br>                 h 1   { <br> <br>                         f o n t - s i z e :   2 . 6 r e m ; <br> <br>                         m a r g i n - b o t t o m :   2 0 p x ; <br> <br>                         c o l o r :   # f f f f f f ; <br> <br>                 } <br> <br> <br> <br>                 h 2   { <br> <br>                         f o n t - s i z e :   1 . 4 r e m ; <br> <br>                         f o n t - w e i g h t :   4 0 0 ; <br> <br>                         m a r g i n - b o t t o m :   4 0 p x ; <br> <br>                         c o l o r :   # D 6 D 6 D 6 ; <br> <br>                 } <br> <br> <br> <br>                 p   { <br> <br>                         f o n t - s i z e :   1 . 2 r e m ; <br> <br>                         l i n e - h e i g h t :   1 . 8 ; <br> <br>                         c o l o r :   # c c c c c c ; <br> <br>                 } <br> <br> <br> <br>                 a . b a c k - b u t t o n   { <br> <br>                         d i s p l a y :   i n l i n e - b l o c k ; <br> <br>                         m a r g i n - t o p :   4 0 p x ; <br> <br>                         p a d d i n g :   1 2 p x   2 4 p x ; <br> <br>                         b a c k g r o u n d - c o l o r :   # f f f f f f 0 d ; <br> <br>                         c o l o r :   # F 2 F 2 F 2 ; <br> <br>                         b o r d e r - r a d i u s :   1 0 p x ; <br> <br>                         t e x t - d e c o r a t i o n :   n o n e ; <br> <br>                         f o n t - w e i g h t :   b o l d ; <br> <br>                         b o r d e r :   1 p x   s o l i d   # f f f f f f 2 2 ; <br> <br>                         t r a n s i t i o n :   a l l   0 . 3 s   e a s e ; <br> <br>                 } <br> <br> <br> <br>                 a . b a c k - b u t t o n : h o v e r   { <br> <br>                         b a c k g r o u n d - c o l o r :   # f f f f f f 2 2 ; <br> <br>                 } <br> <br>         &lt; &#x2F; s t y l e &gt; <br> <br> &lt; &#x2F; h e a d &gt; <br> <br> <br> <br> &lt; b o d y &gt; <br> <br>         &lt; d i v   c l a s s &#x3D; ” c o n t a i n e r ” &gt; <br> <br>                 &lt; h 1 &gt; Y E N - C H I A ,   F E N G &lt; &#x2F; h 1 &gt; <br> <br>                 &lt; h 2 &gt; ���Y	V&lt; &#x2F; h 2 &gt; <br> <br>                 &lt; p &gt; <br> <br>                         b&#x2F;f NMO�O��Scp�vuR\O��-��a}Y���Uak(u-����eW[�Ee�N0�P�}�z&#x2F;fb }�H�a0\O�T�&#96;”}�v҉&#x3D;�0<br> <br>                         bܕ�l�Nb�-��0����Xe�N0�uRa�bS��v�NLu�_Nck(Wx[��fYܕ�e�}���|v��N�R�ZԚ�v�S��0<br> <br>                 &lt; &#x2F; p &gt; <br> <br>                 &lt; a   h r e f &#x3D; ” &#x2F; i n d e x . h t m l ”   c l a s s &#x3D; ” b a c k - b u t t o n ” &gt; �V���&lt; &#x2F; a &gt; <br> <br>         &lt; &#x2F; d i v &gt; <br> <br> &lt; &#x2F; b o d y &gt; <br> <br> <br> <br> &lt; &#x2F; h t m l &gt; </p>
+
+	</div>
+
+	<div class="page-template-comments">
+		
+	</div>
+</div>
+
+<div class="paginator">
+	
+</div>
+  
+															</div>
+
+															
+											</div>
+
+											<div class="main-content-footer">
+												<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2025</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">YEN-CHIA, FENG</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共 2 篇文章
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">讀者</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">閱覽</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm"><?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 框架</span>
+            <span class="text-sm lg:block">主題&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
+        </div>
+        
+        
+            <div>
+                博客已運行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小時 <span class="odometer" id="runtime_minutes"></span> 分鐘 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+            
+                
+        
+                
+        
+        
+    </div>  
+</footer>
+											</div>
+										</div>
+
+										
+
+												<div class="right-side-tools-container">
+													<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+												</div>
+
+												<div class="image-viewer-container">
+	<img src="">
+</div>
+
+													
+
+				</main>
+
+				
+					<script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/Swup.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupSlideTheme.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupScriptsPlugin.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupProgressPlugin.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupScrollPlugin.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupPreloadPlugin.min.js" ></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+						
+	<script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/imageViewer.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/utils.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/main.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/navbarShrink.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/scrollTopBottom.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/lightDarkSwitch.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/categoryList.js" ></script>
+
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/codeBlock.js" ></script>
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/lazyload.js" ></script>
+
+
+
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/runtime.js" ></script>
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/odometer.min.js" ></script>
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/Typed.min.js" ></script>
+  <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/plugins/typed.js" ></script>
+
+
+
+
+
+
+
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/anime.min.js" ></script>
+
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/tocToggle.js" data-swup-reload-script></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/toc.js" data-swup-reload-script></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/plugins/tabs.js" data-swup-reload-script></script>
+
+
+<script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/moment-with-locales.min.js" data-swup-reload-script></script>
+<script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/essays.js" data-swup-reload-script></script>
+
+
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/pangu.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/plugins/pangu.js" ></script>
+
+
+
+	
+</body>
+
+</html>
