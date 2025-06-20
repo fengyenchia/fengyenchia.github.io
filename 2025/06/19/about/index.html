@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Hexo Theme Redefine">
     
-    <meta name="author" content="YEN-CHIA, FENG">
-    <!-- preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <meta name="author" content="YEN-CHIA, FENG">
+            <!-- preconnect -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    
-    <!--- Seo Part-->
-    
-    <link rel="canonical" href="https://fengyenchia.github.io/2025/06/19/about/"/>
-    <meta name="robots" content="index,follow">
-    <meta name="googlebot" content="index,follow">
-    <meta name="revisit-after" content="1 days">
-    
-    
-    
-        
-        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+            
+                                    <!--- Seo Part-->
+                                    
+                                        <link rel="canonical" href="https://fengyenchia.github.io/2025/06/19/about/"/>
+                                            <meta name="robots" content="index,follow">
+                                            <meta name="googlebot" content="index,follow">
+                                            <meta name="revisit-after" content="1 days">
+
+                                            
+                                                
+                                                    
+                                                        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CHIA">
 <meta property="og:url" content="https://fengyenchia.github.io/2025/06/19/about/index.html">
@@ -34,98 +34,362 @@
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://fengyenchia.github.io/images/redefine-og.webp">
-    
-    
-    <!--- Icon Part-->
-    <link rel="icon" type="image/png" href="/images/%E5%B0%8F%E6%9D%B1%E8%A5%BF.svg" sizes="192x192">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/%E5%B0%8F%E6%9D%B1%E8%A5%BF.svg">
-    <meta name="theme-color" content="#A31F34">
-    <link rel="shortcut icon" href="/images/%E5%B0%8F%E6%9D%B1%E8%A5%BF.svg">
-    <!--- Page Info-->
-    
-    <title>
-        
-            YEN CHIA - aaa
-        
-    </title>
+                                                            
+                                                                
+                                                                        <!--- Icon Part-->
+                                                                        <link rel="icon" type="image/png"
+                                                                            href="/images/%E5%B0%8F%E6%9D%B1%E8%A5%BF.svg"
+                                                                            sizes="192x192">
+                                                                        <link rel="apple-touch-icon" sizes="180x180"
+                                                                            href="/images/%E5%B0%8F%E6%9D%B1%E8%A5%BF.svg">
+                                                                        <meta name="theme-color"
+                                                                            content="#A31F34">
+                                                                        <link rel="shortcut icon" href="/images/%E5%B0%8F%E6%9D%B1%E8%A5%BF.svg">
+                                                                            <!--- Page Info-->
+                                                                            
+                                                                                <title>
+                                                                                    
+                                                                                                    YEN CHIA
+                                                                                                        
+                                                                                                            
+                                                                                                                        
+                                                                                </title>
 
-    
+                                                                                
 <link rel="stylesheet" href="/fonts/Chillax/chillax.css">
 
 
-    <!--- Inject Part-->
+                                                                                    <!--- Inject Part-->
+                                                                                    
+                                                                                        
+                                                                                            
+                                                                                                                    
+                                                                                            
+                                                                                                                    
+                                                                                            
+                                                                                                
+                                                                                                            <!-- 齒輪懸浮+工具列 - 強制覆寫 transform --> <style>        
+  .side-tools-container {
+    position: relative;
+  }
+
+  /* 隱藏的工具列，初始狀態 */
+  .side-tools-container .hidden-tools-list {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column-reverse;
+    
+    /* 動畫初始狀態 */
+    opacity: 0;
+    /* [關鍵] 強制初始 transform 方向為 Y 軸 */
+    transform: translateY(15px) !important; 
+    transition: all 0.25s ease-out;
+    pointer-events: none;
+  }
+
+  /* 懸停時的狀態 */
+  .side-tools-container:hover .hidden-tools-list {
+    opacity: 1;
+    /* [關鍵] 強制結束 transform 方向為 Y 軸 */
+    transform: translateY(0) !important;
+    pointer-events: auto;
+  }
+</style>
+<!-- (作者頭像 漂浮動畫) --> <style>
+  .avatar > img {       
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 50% !important;  /* 圓形頭像 */
+    border: 3px solid #CFCFCF !important;  /* 灰色邊框 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) !important; /* 圖片陰影 */
+    object-fit: cover !important; /* 圖片填滿圓形 */
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+</style>
+
+/* 首頁副標題樣式設定 */ <style>
+  #subtitle {
+    font-size: 1.6rem;              /* 字體大小 */
+    font-weight: 450;              /* 字體粗細，介於 regular 與 bold 之間 */
+    color: #F2F2F2;                /* 字體顏色為白色 */
+    animation: fadeInUp 0.2s ease-out forwards; /* 淡入上移動畫效果 */
+    white-space: nowrap;           /* 不換行，單行顯示打字效果 */
+  }
+
+  /* 打字時閃爍的游標樣式 */
+  .typed-cursor {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #F2F2F2;
+    animation: blink 0.9s infinite; /* 游標閃爍動畫 */
+  }
+
+  /* 游標閃爍動畫定義 */
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* 標題淡入並向上移動的動畫定義 */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);  /* 從下方20px開始 */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);     /* 回到原位 */
+    }
+  }
+</style>
+
+
+<!-- (作者介紹區塊) --> <script> document.addEventListener("DOMContentLoaded", function () {
+  // 找箭頭元素（你 HTML 需有 class scroll-down-indicator 的箭頭按鈕）
+  const arrow = document.querySelector(".scroll-down-indicator");
+  const authorSection = document.querySelector(".author-intro-section");
+
+  if (arrow && authorSection) {
+    // 點箭頭時，平滑滾動到作者介紹區塊
+    arrow.addEventListener("click", e => {
+      e.preventDefault();
+      authorSection.scrollIntoView({ behavior: "smooth" });
+    });
+
+    // 監聽滾動，作者區塊出現時加 class 觸發淡入動畫
+    function checkVisible() {
+      const rect = authorSection.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        authorSection.classList.add("visible");
+        window.removeEventListener("scroll", checkVisible);
+      }
+    }
+    window.addEventListener("scroll", checkVisible);
+    checkVisible(); // 頁面載入就檢查一次
+  }
+}); </script>
+<style> /* 作者介紹區塊(整個卡片樣式) */ .author-intro-section {
+  display: flex;
+  flex-direction: column;    /* 整體排版方向：垂直 */
+  align-items: center;        /* 讓內部內容水平置中 */
+  padding: 100px 100px;        /* 上下內邊距 */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(245, 245, 245, 0.05));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 30px;
+  max-width: 95%;
+  margin: 60px auto; /* 上下外邊距，並置中 */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.author-intro-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* 作者介紹區塊(上半部區塊內容) */ .author-top {
+  display: flex;
+  align-items: center;
+  gap: 200px;      /* 內部元素間距 */
+  margin-bottom: 40px; /* 下方間距 */
+  flex-wrap: wrap; /* 允許換行 */
+  justify-content: center;  /* 內容置中 */
+}
+/* 作者介紹區塊(左側頭像) */ .author-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover; /* 圖片填滿圓形 */
+  border: 5px solid #F2F2F2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.author-text-block {
+  display: flex;
+  flex-direction: column; /* 文字區塊垂直排列 */
+  align-items: flex-start;  /* 左對齊 */
+}
+/* 作者名稱 */ .author-name {
+  font-size: 50px;
+  font-weight: 700;   /* 粗體 */
+  color: #F2F2F2;
+  margin-bottom: 6px;
+}
+/* 作者副標題 */ .author-subname {
+  font-size: 40px;
+  font-weight: 500; /* 中等粗細 */
+  color: #F2F2F2;
+}
+/* 作者介紹區塊(下半部區塊內容) */ .author-description {
+  font-size: 20px;
+  line-height: 1.6; /* 行距 */
+  color: #D6D6D6;
+  max-width: 900px;
+  text-align: left; /* 左對齊 */
+}
+/* 作者介紹區塊(button內容) */ .author-subrow {
+  display: flex;
+  justify-content: space-between;   /* 內容左右分布 */
+  align-items: center; /* 文字垂直置中 */
+  width: 100%;  /* 佔滿整行 */
+  max-width: 550px;                 /* 提高最大寬度，拉開距離 */
+  padding: 0 0px;                  /* 左右內距可以微調對齊感 */
+  margin-bottom: 8px;              /* 與下方描述區塊距離 */
+} .about-button {
+  padding: 10px 15px; /* 上下左右內邊距 */
+  font-size: 20px; /* 字體大小 */
+  font-weight: 550; /* 中等粗細 */
+  color: #F2F2F2;  /* 按鈕文字顏色 */
+  background-color: #3A4D7E;  /* 按鈕背景色 */
+  display: inline-block; /* 讓按鈕呈現為行內塊元素 */
+  cursor: pointer; /* 鼠標變為手形 */
+  border-radius: 14px; /* 按鈕圓角 */
+  text-decoration: none;  /* 無下劃線 */
+  transition: background-color 0.3s ease; /* 懸停時背景色變化動畫 */
+}
+.about-button:hover {
+  background-color: #506BAF; /* 懸停時變色 */
+  color: #fff;  /* 按鈕文字顏色 */
+} </style>
+
+<!-- 向下滾動箭頭 --> <style>
+  /* --- 1. 客製化向下滾動箭頭 --- */
+  .custom-scroll-down-indicator {
+    position: fixed; /* 相對於瀏覽器視窗定位 */
+    
+    /* 位置控制 (您可以隨意修改這些數值) */
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%); /* 實現完美水平居中 */
+
+    /* 外觀與動畫 */
+    font-size: 3rem; /* 放大箭頭 */
+    opacity: 0.8; /* 初始透明度 */
+    text-decoration: none;
+    z-index: 10; /* 確保它在最上層 */
+    transition: opacity 0.2s ease;
+  }
+  .custom-scroll-down-indicator:hover {
+    opacity: 1; /* 懸停時變為完全不透明 */
+  }
+
+  /* --- 2. 客製化社群圖示列 --- */
+  .custom-social-contacts {
+    position: fixed;  /* 相對於瀏覽器視窗定位 */
+    bottom: 30px; /* 距離底部 30px */
+    right: 40px;  /* 距離右側 40px  */
+    background: rgba(40, 40, 40, 0.35);
+    border-radius: 40px;
+    border: 1px solid rgba(255,255,255,0.1); /* 邊框 */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    padding: 18px 26px; /* 內邊距 */
+    z-index: 10; /* 確保它在最上層 */
+    transition: box-shadow 0.25s, transform 0.18s;  /* 動畫效果 */
+    display: flex;  /* 使用 flexbox 來排列內部元素 */
+    align-items: center;  /* 垂直置中 */
+  }
+  .custom-social-contacts:hover {
+    box-shadow: 0 12px 40px rgba(0,0,0,0.32), 0 0 0 4px #A31F3433; 
+    transform: translateY(-4px) scale(1.04);  /* 懸停時的動畫效果 */
+  }
+  .custom-social-contacts .social-contacts-inner-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;  /* 圖示間距 */
+    align-items: center;
+  }
+  .custom-social-contacts i {
+    color: #fff;
+    font-size: 1.6rem;  /* 圖示大小 */
+    transition: color 0.18s, transform 0.18s; /* 動畫效果 */
+  }
+  .custom-social-contacts i:hover {
+    color: #F78736;
+    transform: scale(1.18); /* 懸停時放大 */
+  }
+</style>
     
 
-    
+                                                                                                                
+                                                                                                                    
+
+                                                                                                                        
 <link rel="stylesheet" href="/css/style.css">
 
 
-    
-        
+                                                                                                                            
+                                                                                                                                        
 <link rel="stylesheet" href="/css/build/tailwind.css">
 
-    
+                                                                                                                                            
 
-    
+                                                                                                                                                
 <link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
 
-    
+                                                                                                                                                    
 <link rel="stylesheet" href="/fonts/Geist/geist.css">
 
-    <!--- Font Part-->
-    
-    
-    
-    
-    
-    
+                                                                                                                                                        <!--- Font Part-->
+                                                                                                                                                        
+                                                                                                                                                                
+                                                                                                                                                                        
+                                                                                                                                                                                
+                                                                                                                                                                                        
+                                                                                                                                                                                                
 
-    <script id="hexo-configurations">
+                                                                                                                                                                                                            <script id="hexo-configurations">
     window.config = {"hostname":"fengyenchia.github.io","root":"/","language":"zh-TW"};
-    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":"#F78736","default_mode":"light","dark_mode":{"enable":true,"default":"auto","position":"right"}},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":false,"preloader":{"enable":false,"custom_message":null},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null},"back_to_top":{"enable":true,"icon":"fa-solid fa-arrow-up","position":"right","offset":1000}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Welcome to YEN-CHIA's portfolio.","subtitle":{"text":["歡迎來到我的網站！","這裡是我的創作空間～","一起來探索吧！"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":120,"backing_speed":150,"starting_delay":0,"backing_delay":0,"loop":true,"smart_backspace":true},"text_color":{"light":"#F2F2F2","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","zhihu":null,"twitter":null,"email":"yanjia20050504@gmail.com"},"qrs":{"weixin":null}},"buttons":{"enable":true,"list":[{"text":"作品集","url":"/portfolio","icon":"fa-solid fa-briefcase"},{"text":"關於我","url":"/about","icon":"fa-solid fa-user"},{"text":"聯絡我","url":"/contact","icon":"fa-solid fa-envelope"}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"About":{"icon":"/images/小東西.svg","submenus":{"Me":"/about","Github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","Blog":"https://ohevan.com"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"作者介紹","show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2025/6/19 12:00:00"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":"#F78736","default_mode":"light","dark_mode":{"enable":true,"default":"auto","position":"right"}},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":false},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":false,"preloader":{"enable":false,"custom_message":null},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null},"back_to_top":{"enable":true,"icon":"fa-solid fa-arrow-up","position":"right","offset":1000}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Welcome to YEN-CHIA's portfolio.","subtitle":{"text":["歡迎來到我的網站！","這裡是我的創作空間～","一起來探索吧！"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":120,"backing_speed":150,"starting_delay":100,"backing_delay":0,"loop":true,"smart_backspace":true},"text_color":{"light":"#F2F2F2","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","zhihu":null,"twitter":null,"email":"yanjia20050504@gmail.com","discord":"https://discordapp.com/users/842736469180678185"},"qrs":{"weixin":null}},"buttons":{"enable":true,"list":[{"text":"作品集","url":"/portfolio","icon":"fa-solid fa-briefcase"},{"text":"關於我","url":"/about","icon":"fa-solid fa-user"},{"text":"聯絡我","url":"/contact","icon":"fa-solid fa-envelope"}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"icon":"/images/小東西.svg","submenus":{"Me":"/about","Github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","discord":"https://discordapp.com/users/842736469180678185"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"作者介紹","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2025/6/20 12:00:00"};
     window.lang_ago = {"second":"%s 秒前","minute":"%s 分鐘前","hour":"%s 小時前","day":"%s 天前","week":"%s 周前","month":"%s 個月前","year":"%s 年前"};
     window.data = {"masonry":false};
   </script>
-    
-    <!--- Fontawesome Part-->
-    
+
+                                                                                                                                                                                                                <!--- Fontawesome Part-->
+                                                                                                                                                                                                                
 <link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
 
-    
+                                                                                                                                                                                                                    
 <link rel="stylesheet" href="/fontawesome/brands.min.css">
 
-    
+                                                                                                                                                                                                                        
 <link rel="stylesheet" href="/fontawesome/solid.min.css">
 
-    
+                                                                                                                                                                                                                            
 <link rel="stylesheet" href="/fontawesome/regular.min.css">
 
-    
-        
+                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                    
 <link rel="stylesheet" href="/fontawesome/thin.min.css">
 
-    
-    
-        
+                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                
 <link rel="stylesheet" href="/fontawesome/light.min.css">
 
-    
-    
-        
+                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                            
 <link rel="stylesheet" href="/fontawesome/duotone.min.css">
 
-    
-    
-        
+                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                        
 <link rel="stylesheet" href="/fontawesome/sharp-solid.min.css">
 
-    
+                                                                                                                                                                                                                                                                            
 <meta name="generator" content="Hexo 7.3.0"></head>
 
-
-
-<body>
-	<div class="progress-bar-container">
+	<body>
+		<div class="progress-bar-container">
 	
 	<span class="scroll-progress-bar"></span>
 	
@@ -177,6 +441,23 @@
 
                             <li class="navbar-item">
                                 <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    歸檔
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
                                 <a class="has-dropdown"
                                    href="#"
                                         onClick=&#34;return false;&#34;>
@@ -208,8 +489,8 @@
                                             </li>
                                         
                                             <li>
-                                                <a target="_blank" rel="noopener" href="https://ohevan.com">
-                                                    BLOG
+                                                <a target="_blank" rel="noopener" href="https://discordapp.com/users/842736469180678185">
+                                                    DISCORD
                                                 </a>
                                             </li>
                                         
@@ -257,6 +538,26 @@
                 
                     
 
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                歸檔
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
                     <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
                         
                         <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
@@ -291,7 +592,7 @@
                                 
                                     <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
                                         <a class=" text-third-text-color text-xl"
-                                           target="_blank" rel="noopener" href="https://ohevan.com">BLOG</a>
+                                           target="_blank" rel="noopener" href="https://discordapp.com/users/842736469180678185">DISCORD</a>
                                     </div>
                                 
                             </div>
@@ -300,6 +601,29 @@
             
 
             
+            
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
             
         </ul>
 
@@ -528,71 +852,153 @@
 		<div class="main-content-footer">
 			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
     <div class="info-container py-3 text-center">
+
         
-        <div class="text-center">
-            &copy;
-            
-              <span>2025</span>
-              -
-            
-            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">YEN-CHIA, FENG</a>
-            
+            <div class="copyright-info">
+                ©
                 
-                <p class="post-count space-x-0.5">
                     <span>
-                        共 2 篇文章
-                    </span>
+                        2025
+                    </span> -
                     
-                </p>
+                        2025
+                              <i class="fa-solid fa-sync fa-spin"; color: #f54545"></i>  
+                                <a href="/">
+                                    YEN-CHIA, FENG
+                                </a>
+            </div>
+
             
-        </div>
-        
-            <script false src="https://cn.vercount.one/js"></script>
-            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
                 
-                    <span id="busuanzi_container_site_uv" class="lg:!block">
-                        <span class="text-sm">讀者</span>
-                        <span id="busuanzi_value_site_uv"></span>
-                    </span>
-                
-                
-                    <span id="busuanzi_container_site_pv" class="lg:!block">
-                        <span class="text-sm">閱覽</span>
-                        <span id="busuanzi_value_site_pv"></span>
-                    </span>
-                
-            </div>
-        
-        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
-            <span class="lg:block text-sm"><?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 框架</span>
-            <span class="text-sm lg:block">主題&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
-        </div>
-        
-        
-            <div>
-                博客已運行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小時 <span class="odometer" id="runtime_minutes"></span> 分鐘 <span class="odometer" id="runtime_seconds"></span> 秒
-            </div>
-        
-        
-            <script false>
-                try {
-                    function odometer_init() {
-                    const elements = document.querySelectorAll('.odometer');
-                    elements.forEach(el => {
-                        new Odometer({
-                            el,
-                            format: '( ddd).dd',
-                            duration: 200
-                        });
-                    });
-                    }
-                    odometer_init();
-                } catch (error) {}
-            </script>
-        
-        
-        
-    </div>  
+                    <div class="custom-footer-text my-2">
+                        這是我的個人網站，歡迎來訪！
+                    </div>
+                    
+
+                        
+                            
+                                
+                                    <p class="post-count space-x-0.5">
+                                        <span>共 2 篇文章</span>
+                                        
+                                    </p>
+                                    
+
+                                        
+                                            <div
+                                                class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+
+                                                
+                                                    
+                                                        <script  src = "https://cn.vercount.one/js"></script>
+
+                                                        
+                                                            
+                                                                <span id="busuanzi_container_site_uv" class="lg:!block">
+                                                                    <span class="text-sm">讀者</span>
+                                                                    <span id="busuanzi_value_site_uv"></span>
+                                                                </span>
+                                                                
+
+                                                                    
+                                                                        
+                                                                            <span id="busuanzi_container_site_pv"
+                                                                                class="lg:!block">
+                                                                                <span class="text-sm">閱覽</span>
+                                                                                <span
+                                                                                    id="busuanzi_value_site_pv"></span>
+                                                                            </span>
+                                                                            
+                                                                                
+
+                                                                                    
+                                                                                        
+                                                                                            <div
+                                                                                                class="runtime-info lg:!block mt-1">
+                                                                                                
+                                                                                                    <span
+                                                                                                        class="text-sm">
+                                                                                                        博客已運行
+                                                                                                    </span>
+                                                                                                    <span
+                                                                                                        class="odometer"
+                                                                                                        id="runtime_days"></span><span
+                                                                                                        class="text-sm">
+                                                                                                        天
+                                                                                                    </span>
+                                                                                                    <span
+                                                                                                        class="odometer"
+                                                                                                        id="runtime_hours"></span><span
+                                                                                                        class="text-sm">
+                                                                                                        小時
+                                                                                                    </span>
+                                                                                                    <span
+                                                                                                        class="odometer"
+                                                                                                        id="runtime_minutes"></span><span
+                                                                                                        class="text-sm">
+                                                                                                        分鐘
+                                                                                                    </span>
+                                                                                                    <span
+                                                                                                        class="odometer"
+                                                                                                        id="runtime_seconds"></span><span
+                                                                                                        class="text-sm">
+                                                                                                        秒
+                                                                                                    </span>
+                                                                                            </div>
+                                                                                            
+                                            </div>
+
+                                            
+                                                <div
+                                                    class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+                                                    <span class="lg:block text-sm"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 框架</span>
+                                                    <span class="text-sm lg:block">主題 <a
+                                                                class="text-base" target="_blank"
+                                                                href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine
+                                                                v2.8.2</a></span>
+                                                </div>
+
+                                                
+                                                    
+
+                                                            
+                                                                
+                                                                    <script >
+                                                        try {
+                                                                                function odometer_init() {
+                                                                                    const elements = document.querySelectorAll('.odometer');
+                                                                                    elements.forEach(el => { new Odometer({ el, format: '(,ddd).dd', duration: 200 }); });
+                                                                                }
+                                                                                odometer_init();
+                                                                            } catch (error) { }
+                                                                        </script>
+                                                                    
+
+                                                                        
+                                                                            
+                                                                                
+                                                                                    
+                                                                                                
+                                                                                    
+                                                                                                
+                                                                                    
+                                                                                        <script>
+  // 等待頁面完全載入，確保所有元素都已存在
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.querySelector('.toggle-tools-list');
+    if (toggleButton) {
+      // 移除所有可能存在的點擊事件，讓 CSS hover 完全接管
+      const newButton = toggleButton.cloneNode(true);
+      toggleButton.parentNode.replaceChild(newButton, toggleButton);
+    }
+  });
+</script>
+
+                                                                                            
+                                                                                                
+                                                                                                    
+
+    </div>
 </footer>
 		</div>
 	</div>
@@ -638,6 +1044,10 @@
 		
 
 		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="fa-regular fa-arrow-up"></i>
+		</li>
+		
 
 		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
 			<i class="fa-regular fa-arrow-down"></i>
@@ -647,11 +1057,6 @@
 	<ul class="visible-tools-list">
 		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
 			<i class="fa-regular fa-cog fa-spin"></i>
-		</li>
-		
-		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
-			<i class="arrow-up fas fa-arrow-up"></i>
-			<span class="percent"></span>
 		</li>
 		
 		
@@ -669,7 +1074,7 @@
 
 
 
-	
+			
 <script src="/js/build/tools/imageViewer.js" type="module"></script>
 
 <script src="/js/build/utils.js" type="module"></script>
@@ -757,7 +1162,7 @@
 
 
 
-	
-</body>
+				
+	</body>
 
 </html>
