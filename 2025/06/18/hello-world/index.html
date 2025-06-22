@@ -66,20 +66,54 @@
                                                                                                                     
                                                                                             
                                                                                                 
-                                                                                                            <!-- (顯示載入動畫的icon) --> <style> .preloader-container .preloader-icon {
-  display: block !important; /* 強制顯示為區塊元素 */
-  width: 150px !important;    /* 給定一個明確的寬度 */
-  height: 150px !important;   /* 給定一個明確的高度 */
-  margin: 0 auto 20px auto !important; /* 水平居中，並與下方的文字產生 20px 的間距 */
+                                                                                                            <!-- home banner字體樣式 --> <style>
+  .custom-banner-title {
+    /* 1. 細一點的字體 (Font Weight) */
+    font-weight: 600; /* 300 是 light (細體)，400 是 regular (常規)，700 是 bold (粗體) */
 
-  position: relative; /* z-index 需要配合 position 才會生效 */
-  z-index: 20;
-} /* --- 修改 Preloader 文字樣式 --- */ .preloader-container .preloader-message {
-  font-size: 24px !important;  /* 將字體大小設定為 24px */
-  color: #222020 !important;
-  
-  position: relative;
-  z-index: 10;
+    /* 2. 文字陰影 (Text Shadow) */
+    /* 語法: text-shadow: [水平偏移] [垂直偏移] [模糊半徑] [顏色]; */
+    /* 您可以疊加多層陰影，用逗號隔開 */
+    text-shadow:
+      0px 2px 5px rgba(0, 0, 0, 0.5),  /* 一個比較深的、靠近文字的陰影，營造立體感 */
+      0px 0px 15px rgba(0, 0, 0, 0.3); /* 一個比較擴散的、柔和的背景陰影 */
+  }
+</style>
+<!-- 首頁副標題樣式設定 --> <style>
+  #subtitle {
+    font-size: 1.6rem;              /* 字體大小 */
+    font-weight: 600;              /* 字體粗細，介於 regular 與 bold 之間 */
+    color: #F2F2F2;                /* 字體顏色為白色 */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* 輕微的文字陰影 */
+    animation: fadeInUp 0.2s ease-out forwards; /* 淡入上移動畫效果 */
+    white-space: nowrap;           /* 不換行，單行顯示打字效果 */
+  }
+
+  /* 打字時閃爍的游標樣式 */
+  .typed-cursor {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #F2F2F2;
+    animation: blink 0.9s infinite; /* 游標閃爍動畫 */
+  }
+
+  /* 游標閃爍動畫定義 */
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* 標題淡入並向上移動的動畫定義 */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);  /* 從下方20px開始 */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);     /* 回到原位 */
+    }
+  }
 </style>
 <!-- (齒輪懸浮+工具列 - 強制覆寫 transform) --> <style> 
   html {
@@ -107,6 +141,7 @@
     transform: translateY(15px) !important; 
     transition: all 0.25s ease-out;
     pointer-events: none;
+    visibility: hidden; /* 確保隱藏 */
   }
 
   /* 懸停時的狀態 */
@@ -115,6 +150,7 @@
     /* [關鍵] 強制結束 transform 方向為 Y 軸 */
     transform: translateY(0) !important;
     pointer-events: auto;
+    visibility: visible; /* 確保可見 */
   }
 </style>
 <!-- (作者頭像 漂浮動畫) --> <style>
@@ -134,49 +170,13 @@
     100% { transform: translateY(0); }
   }
 </style>
-
-<!-- 首頁副標題樣式設定 --> <style>
-  #subtitle {
-    font-size: 1.6rem;              /* 字體大小 */
-    font-weight: 500;              /* 字體粗細，介於 regular 與 bold 之間 */
-    color: #F2F2F2;                /* 字體顏色為白色 */
-    animation: fadeInUp 0.2s ease-out forwards; /* 淡入上移動畫效果 */
-    white-space: nowrap;           /* 不換行，單行顯示打字效果 */
-  }
-
-  /* 打字時閃爍的游標樣式 */
-  .typed-cursor {
-    font-weight: 400;
-    font-size: 1.6rem;
-    color: #F2F2F2;
-    animation: blink 0.9s infinite; /* 游標閃爍動畫 */
-  }
-
-  /* 游標閃爍動畫定義 */
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-  }
-
-  /* 標題淡入並向上移動的動畫定義 */
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);  /* 從下方20px開始 */
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);     /* 回到原位 */
-    }
-  }
-</style>
 <style> /* 作者介紹區塊(整個卡片樣式) */ .author-intro-section {
   display: flex;
   flex-direction: column;    /* 整體排版方向：垂直 */
   align-items: center;        /* 讓內部內容水平置中 */
   justify-content: center; /* 增加垂直居中 */
   padding: 60px 20px;        /* (前面的值控制卡片的垂直高度)上下內邊距 */
-  background: linear-gradient(to bottom, rgba(235, 204, 207, 0.1), rgba(26, 26, 26, 0.15)); /* 漸層背景 */
+  background: linear-gradient(to bottom, rgb(246, 232, 229, 0.1), rgba(26, 26, 26, 0.15)); /* 漸層背景 */
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
   border-radius: 30px;
@@ -352,7 +352,7 @@
 
                                                                                                                                                                                                             <script id="hexo-configurations">
     window.config = {"hostname":"fengyenchia.github.io","root":"/","language":"zh-TW"};
-    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":"#F78736","default_mode":"light","dark_mode":{"enable":true,"default":"auto","position":"right"}},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":false},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":false,"preloader":{"enable":true,"custom_message":"Loading to YEN CHIA's Page...","background":{"enable":true,"image":"/images/ocean_light.png"},"icon":{"enable":true,"image":"/images/loading_new.svg"}},"open_graph":{"enable":true,"image":"/images/ocean_2.png","description":"Welcome to YENCHIA'S page."},"google_analytics":{"enable":false,"id":null},"back_to_top":{"enable":true,"icon":"fa-solid fa-arrow-up","position":"right","offset":1000}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Welcome to YEN-CHIA's portfolio.","subtitle":{"text":["歡迎來到我的網站！","這裡是我的創作空間～","一起來探索吧！"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":120,"backing_speed":150,"starting_delay":100,"backing_delay":0,"loop":true,"smart_backspace":true},"text_color":{"light":"#F2F2F2","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","zhihu":null,"twitter":null,"email":"yanjia20050504@gmail.com","discord":"https://discordapp.com/users/842736469180678185"},"qrs":{"weixin":null}},"buttons":{"enable":true,"list":[{"text":"作品集","url":"/portfolio","icon":"fa-solid fa-briefcase"},{"text":"關於我","url":"/about","icon":"fa-solid fa-user"},{"text":"聯絡我","url":"/contact","icon":"fa-solid fa-envelope"}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"icon":"/images/小東西.svg","submenus":{"Me":"/about","Github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","discord":"https://discordapp.com/users/842736469180678185"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"作者介紹","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2025/6/20 12:00:00"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":"#F78736","default_mode":"light","dark_mode":{"enable":true,"default":"auto","position":"right"}},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":false,"background":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":false,"preloader":{"enable":true,"custom_message":"Loading..."},"open_graph":{"enable":true,"image":"/images/ocean_2.png","description":"Welcome to YENCHIA'S page."},"google_analytics":{"enable":false,"id":null},"back_to_top":{"enable":true,"icon":"fa-solid fa-arrow-up","position":"right","offset":1000}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/ocean_light_new.png","dark":"/images/ocean_dark_new.png"},"title":"<span class=\"custom-banner-title\">Welcome To My Page.</span>","subtitle":{"text":["歡迎來到我的網站！","這裡是我的創作空間～","一起來探索吧！"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":120,"backing_speed":150,"starting_delay":100,"backing_delay":0,"loop":true,"smart_backspace":true},"text_color":{"light":"#F2F2F2","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","zhihu":null,"twitter":null,"email":"yanjia20050504@gmail.com","discord":"https://discordapp.com/users/842736469180678185"},"qrs":{"weixin":null}},"buttons":{"enable":true,"list":[{"text":"作品集","url":"/portfolio","icon":"fa-solid fa-briefcase"},{"text":"關於我","url":"/about","icon":"fa-solid fa-user"},{"text":"聯絡我","url":"/contact","icon":"fa-solid fa-envelope"}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Status":{"path":"https://status.ohevan.com/","icon":"fa-regular fa-chart-bar"},"Links":{"icon":"fa-regular fa-link","submenus":{"Link1":"/link1","Link2":"/link2","Link3":"/link3"}},"About":{"icon":"fa-regular fa-address-card","submenus":{"Me":"/more","Github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","discord":"https://discordapp.com/users/842736469180678185","Email":"yanjia20050504@gmail.com"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"作者介紹","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2025/6/20 12:00:00"};
     window.lang_ago = {"second":"%s 秒前","minute":"%s 分鐘前","hour":"%s 小時前","day":"%s 天前","week":"%s 週前","month":"%s 個月前","year":"%s 年前"};
     window.data = {"masonry":false};
   </script>
@@ -395,10 +395,10 @@
 	<body>
 		<div class="progress-bar-container">
 	
-	<span class="scroll-progress-bar"></span>
-	
+		<span class="scroll-progress-bar"></span>
+		
 
-	
+			
 </div>
 	
 		<style>
@@ -423,14 +423,16 @@
 
     @media (max-width: 600px) {
         .ml13 {
-            font-size: 2.6rem !important; /* Adjust this value as needed */
+            font-size: 2.6rem !important;
+            /* Adjust this value as needed */
         }
     }
 
     .preloader {
         display: flex;
         flex-direction: column;
-        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        gap: 1rem;
+        /* Tailwind 'gap-4' is 1rem */
         align-items: center;
         justify-content: center;
         position: fixed;
@@ -440,16 +442,18 @@
         bottom: 0;
         left: 0;
         width: 100vw;
-        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        height: 100vh;
+        /* 'h-screen' is 100% of the viewport height */
         background-color: var(--preloader-background-color);
-        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        z-index: 1100;
+        /* 'z-[1100]' sets the z-index */
         transition: opacity 0.2s ease-in-out;
     }
 
     .ml13 {
-        font-size: 3.2rem;
+        font-size: 3rem;
         /* text-transform: uppercase; */
-        color: var(--preloader-text-color);
+        color: #4D4D4D;
         letter-spacing: -1px;
         font-weight: 500;
         font-family: 'Chillax-Variable', sans-serif;
@@ -470,7 +474,7 @@
 
 <div class="preloader">
     <h2 class="ml13">
-        Loading to YEN CHIA&#39;s Page...
+        Loading...
     </h2>
     <script>
         var textWrapper = document.querySelector('.ml13');
@@ -481,7 +485,7 @@
         textWrapper.innerHTML = '';
 
         // Wrap each word and its letters in spans
-        words.forEach(function(word) {
+        words.forEach(function (word) {
             var wordSpan = document.createElement('span');
             wordSpan.classList.add('word');
             wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -508,7 +512,7 @@
                 easing: "easeInExpo",
                 duration: 1000,
                 delay: (el, i) => 15 * i,
-                complete: function() {
+                complete: function () {
                     hidePreloader();
                 }
             }, '-=700');
@@ -613,11 +617,28 @@
 
                             <li class="navbar-item">
                                 <!-- Menu -->
+                                <a class=""
+                                   target="_blank" rel="noopener" href="https://status.ohevan.com/"
+                                        >
+                                    <i class="fa-regular fa-chart-bar fa-fw"></i>
+                                    狀態
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
                                 <a class="has-dropdown"
                                    href="#"
                                         onClick=&#34;return false;&#34;>
-                                    <i class="/images/小東西.svg fa-fw"></i>
-                                    關於
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    連結
                                     <i class="fa-solid fa-chevron-down fa-fw"></i>
                                 </a>
 
@@ -626,7 +647,46 @@
                                     <ul class="sub-menu">
                                         
                                             <li>
-                                                <a href="/about">
+                                                <a href="/link1">
+                                                    LINK1
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/link2">
+                                                    LINK2
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/link3">
+                                                    LINK3
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-address-card fa-fw"></i>
+                                    關於我
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/more">
                                                     ME
                                                 </a>
                                             </li>
@@ -646,6 +706,12 @@
                                             <li>
                                                 <a target="_blank" rel="noopener" href="https://discordapp.com/users/842736469180678185">
                                                     DISCORD
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/yanjia20050504@gmail.com">
+                                                    EMAIL
                                                 </a>
                                             </li>
                                         
@@ -713,13 +779,72 @@
                 
                     
 
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           target="_blank" rel="noopener" href="https://status.ohevan.com/"
+                        >
+                            <span>
+                                狀態
+                            </span>
+                            
+                                <i class="fa-regular fa-chart-bar fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-Links"
+                        >
+                            <span>
+                                連結
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-Links">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/link1">LINK1</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/link2">LINK2</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/link3">LINK3</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+                
+                    
+
                     <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
                         
                         <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
                              navbar-data-toggle="submenu-About"
                         >
                             <span>
-                                關於
+                                關於我
                             </span>
                             
                                 <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
@@ -732,7 +857,7 @@
                                 
                                     <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
                                         <a class=" text-third-text-color text-xl"
-                                           href="/about">ME</a>
+                                           href="/more">ME</a>
                                     </div>
                                 
                                     <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
@@ -748,6 +873,11 @@
                                     <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
                                         <a class=" text-third-text-color text-xl"
                                            target="_blank" rel="noopener" href="https://discordapp.com/users/842736469180678185">DISCORD</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/yanjia20050504@gmail.com">EMAIL</a>
                                     </div>
                                 
                             </div>
