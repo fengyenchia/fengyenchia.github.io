@@ -41,7 +41,7 @@
                                                                         <link rel="apple-touch-icon" sizes="180x180"
                                                                             href="/images/%E5%B0%8F%E6%9D%B1%E8%A5%BF.svg">
                                                                         <meta name="theme-color"
-                                                                            content="#A31F34">
+                                                                            content="#23363e">
                                                                         <link rel="shortcut icon" href="/images/%E5%B0%8F%E6%9D%B1%E8%A5%BF.svg">
                                                                             <!--- Page Info-->
                                                                             
@@ -173,7 +173,7 @@
   flex-direction: column;    /* 整體排版方向：垂直 */
   align-items: center;        /* 讓內部內容水平置中 */
   justify-content: center; /* 增加垂直居中 */
-  padding: 60px 20px;        /* (前面的值控制卡片的垂直高度)上下內邊距 */
+  padding: 70px 20px;        /* (前面的值控制卡片的垂直高度)上下內邊距 */
   background: linear-gradient(to bottom, rgb(246, 232, 229, 0.1), rgba(26, 26, 26, 0.15)); /* 漸層背景 */
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
@@ -194,7 +194,7 @@
 /* 作者介紹區塊(上半部區塊內容) */ .author-top {
   display: flex;
   align-items: center;
-  gap: 180px;      /* 內部元素間距 */
+  gap: 100px;      /* 內部元素間距 */
   margin-bottom: 40px; /* 下方間距 */
   flex-wrap: wrap; /* 允許換行 */
   justify-content: center;  /* 內容置中 */
@@ -214,22 +214,22 @@
 }
 /* 作者名稱 */ .author-name {
   font-size: 50px;
-  font-weight: 700;   /* 粗體 */
+  font-weight: 600;   /* 粗體 */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 文字陰影 */
   color: #F2F2F2;
-  margin-bottom: 6px;
+  margin-bottom: 15px; /* 與副標題間距 */
 }
 /* 作者副標題 */ .author-subname {
-  font-size: 40px;
-  font-weight: 500; /* 中等粗細 */
+  font-size: 30px;
+  font-weight: 450; /* 中等粗細 */
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); /* 文字陰影 */
   color: #F2F2F2;
 }
 /* 作者介紹區塊(下半部區塊內容) */ .author-description {
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1.6; /* 行距 */
-  color: #D6D6D6;
-  max-width: 850px;
+  color: #E6E6E6;
+  max-width: 880px; /* 最大寬度 */
   text-align: left; /* 左對齊 */
 }
 /* 作者介紹區塊(button內容) */ .author-subrow {
@@ -237,7 +237,7 @@
   justify-content: space-between;   /* 內容左右分布 */
   align-items: center; /* 文字垂直置中 */
   width: 100%;  /* 佔滿整行 */
-  max-width: 550px;                 /* 提高最大寬度，拉開距離 */
+  max-width: 580px;                 /* 提高最大寬度，拉開距離 */
   padding: 0 0px;                  /* 左右內距可以微調對齊感 */
   margin-bottom: 8px;              /* 與下方描述區塊距離 */
 } .about-button {
@@ -285,9 +285,9 @@
     position: fixed;  /* 相對於瀏覽器視窗定位 */
     bottom: 30px; /* 距離底部 30px */
     right: 40px;  /* 距離右側 40px  */
-    background: rgba(40, 40, 40, 0.35);
+    background: rgba(120, 120, 120, 0.47); /* 背景色 */
     border-radius: 40px;
-    border: 1px solid rgba(255,255,255,0.1); /* 邊框 */
+    border: 2px solid rgba(255,255,255,0.1); /* 邊框 */
     box-shadow: 0 8px 24px rgba(0,0,0,0.12);
     padding: 18px 26px; /* 內邊距 */
     z-index: 10; /* 確保它在最上層 */
@@ -296,7 +296,7 @@
     align-items: center;  /* 垂直置中 */
   }
   .custom-social-contacts:hover {
-    box-shadow: 0 12px 40px rgba(0,0,0,0.32), 0 0 0 4px #A31F3433; 
+    box-shadow: 0 12px 40px rgba(0,0,0,0.32), 0 0 0 4px #7eada1; 
     transform: translateY(-4px) scale(1.04);  /* 懸停時的動畫效果 */
   }
   .custom-social-contacts .social-contacts-inner-wrapper {
@@ -307,15 +307,15 @@
   }
   .custom-social-contacts i {
     color: #fff;
-    font-size: 1.6rem;  /* 圖示大小 */
+    font-size: 1.7rem;  /* 圖示大小 */
     transition: color 0.18s, transform 0.18s; /* 動畫效果 */
   }
   .custom-social-contacts i:hover {
-    color: #F78736;
+    color: #7eada1;
     transform: scale(1.18); /* 懸停時放大 */
   }
 </style>
-    
+<!-- (------------------more頁面裡面的文字------------------) -->
 
                                                                                                                 
                                                                                                                     
@@ -350,7 +350,7 @@
 
                                                                                                                                                                                                             <script id="hexo-configurations">
     window.config = {"hostname":"fengyenchia.github.io","root":"/","language":"zh-TW"};
-    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":"#F78736","default_mode":"light","dark_mode":{"enable":true,"default":"auto","position":"right"}},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":false,"background":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":false,"preloader":{"enable":true,"custom_message":"Loading..."},"open_graph":{"enable":true,"image":"/images/ocean_2.png","description":"Welcome to YENCHIA'S page."},"google_analytics":{"enable":false,"id":null},"back_to_top":{"enable":true,"icon":"fa-solid fa-arrow-up","position":"right","offset":1000}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/ocean_light_new.png","dark":"/images/ocean_dark_new.png"},"title":"<span class=\"custom-banner-title\">Welcome To My Page.</span>","subtitle":{"text":["歡迎來到我的網站！","這裡是我的創作空間～","一起來探索吧！"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":120,"backing_speed":150,"starting_delay":100,"backing_delay":0,"loop":true,"smart_backspace":true},"text_color":{"light":"#F2F2F2","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","zhihu":null,"twitter":null,"email":"yanjia20050504@gmail.com","discord":"https://discordapp.com/users/842736469180678185"},"qrs":{"weixin":null}},"buttons":{"enable":true,"list":[{"text":"作品集","url":"/portfolio","icon":"fa-solid fa-briefcase"},{"text":"關於我","url":"/about","icon":"fa-solid fa-user"},{"text":"聯絡我","url":"/contact","icon":"fa-solid fa-envelope"}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Status":{"path":"https://status.ohevan.com/","icon":"fa-regular fa-chart-bar"},"Links":{"icon":"fa-regular fa-link","submenus":{"Link1":"/link1","Link2":"/link2","Link3":"/link3"}},"About":{"icon":"fa-regular fa-address-card","submenus":{"Me":"/more","Github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","discord":"https://discordapp.com/users/842736469180678185","Email":"yanjia20050504@gmail.com"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"作者介紹","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2025/6/20 12:00:00"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#23363e","secondary":"#F78736","default_mode":"light","dark_mode":{"enable":true,"default":"auto","position":"right"}},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":false,"background":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":false,"preloader":{"enable":true,"custom_message":"Loading..."},"open_graph":{"enable":true,"image":"/images/ocean_2.png","description":"Welcome to YENCHIA'S page."},"google_analytics":{"enable":false,"id":null},"back_to_top":{"enable":true,"icon":"fa-solid fa-arrow-up","position":"right","offset":1000}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/ocean_light_new.png","dark":"/images/ocean_dark_new.png"},"title":"<span class=\"custom-banner-title\">Welcome To My Page.</span>","subtitle":{"text":["歡迎來到我的網站！","這裡是我的創作空間～","一起來探索吧！"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":120,"backing_speed":150,"starting_delay":100,"backing_delay":0,"loop":true,"smart_backspace":true},"text_color":{"light":"#F2F2F2","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","zhihu":null,"twitter":null,"email":"mailto:yanjia20050504@gmail.com","discord":"https://discordapp.com/users/842736469180678185"},"qrs":{"weixin":null}},"buttons":{"enable":true,"list":[{"text":"作品集","url":"/portfolio","icon":"fa-solid fa-briefcase"},{"text":"關於我","url":"/about","icon":"fa-solid fa-user"},{"text":"聯絡我","url":"/contact","icon":"fa-solid fa-envelope"}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Status":{"path":"https://status.ohevan.com/","icon":"fa-regular fa-chart-bar"},"Links":{"icon":"fa-regular fa-link","submenus":{"Link1":"/link1","Link2":"/link2","Link3":"/link3"}},"About":{"icon":"fa-regular fa-address-card","submenus":{"Me":"/more","Github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","discord":"https://discordapp.com/users/842736469180678185","Email":"mailto:yanjia20050504@gmail.com"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"作者介紹","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2025/6/20 12:00:00"};
     window.lang_ago = {"second":"%s 秒前","minute":"%s 分鐘前","hour":"%s 小時前","day":"%s 天前","week":"%s 週前","month":"%s 個月前","year":"%s 年前"};
     window.data = {"masonry":false};
   </script>
@@ -708,7 +708,7 @@
                                             </li>
                                         
                                             <li>
-                                                <a href="/yanjia20050504@gmail.com">
+                                                <a href="mailto:yanjia20050504@gmail.com">
                                                     EMAIL
                                                 </a>
                                             </li>
@@ -875,7 +875,7 @@
                                 
                                     <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
                                         <a class=" text-third-text-color text-xl"
-                                           href="/yanjia20050504@gmail.com">EMAIL</a>
+                                           href="mailto:yanjia20050504@gmail.com">EMAIL</a>
                                     </div>
                                 
                             </div>
@@ -920,7 +920,7 @@
         <div class="label text-third-text-color text-sm">分類</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">3</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -996,7 +996,7 @@
                             
                                 
                                     <p class="post-count space-x-0.5">
-                                        <span>共 2 篇文章</span>
+                                        <span>共 3 篇文章</span>
                                         
                                     </p>
                                     
