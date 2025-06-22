@@ -21,17 +21,17 @@
                                             
                                                 
                                                     
-                                                        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+                                                        <meta name="description" content="Welcome to YENCHIA&#39;S page.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Page Not Found">
 <meta property="og:url" content="https://fengyenchia.github.io/404.html">
 <meta property="og:site_name" content="CHIA">
-<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:description" content="Welcome to YENCHIA&#39;S page.">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://fengyenchia.github.io/images/redefine-og.webp">
+<meta property="og:image" content="https://fengyenchia.github.io/images/ocean_2.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://fengyenchia.github.io/images/redefine-og.webp">
+<meta name="twitter:image" content="https://fengyenchia.github.io/images/ocean_2.png">
                                                             
                                                                 
                                                                         <!--- Icon Part-->
@@ -64,7 +64,22 @@
                                                                                                                     
                                                                                             
                                                                                                 
-                                                                                                            <!-- (齒輪懸浮+工具列 - 強制覆寫 transform) --> <style> 
+                                                                                                            <!-- (顯示載入動畫的icon) --> <style> .preloader-container .preloader-icon {
+  display: block !important; /* 強制顯示為區塊元素 */
+  width: 150px !important;    /* 給定一個明確的寬度 */
+  height: 150px !important;   /* 給定一個明確的高度 */
+  margin: 0 auto 20px auto !important; /* 水平居中，並與下方的文字產生 20px 的間距 */
+
+  position: relative; /* z-index 需要配合 position 才會生效 */
+  z-index: 20;
+} /* --- 修改 Preloader 文字樣式 --- */ .preloader-container .preloader-message {
+  font-size: 24px !important;  /* 將字體大小設定為 24px */
+  color: #222020 !important;
+  
+  position: relative;
+  z-index: 10;
+</style>
+<!-- (齒輪懸浮+工具列 - 強制覆寫 transform) --> <style> 
   html {
     scroll-behavior: smooth;
   }
@@ -121,7 +136,7 @@
 <!-- 首頁副標題樣式設定 --> <style>
   #subtitle {
     font-size: 1.6rem;              /* 字體大小 */
-    font-weight: 450;              /* 字體粗細，介於 regular 與 bold 之間 */
+    font-weight: 500;              /* 字體粗細，介於 regular 與 bold 之間 */
     color: #F2F2F2;                /* 字體顏色為白色 */
     animation: fadeInUp 0.2s ease-out forwards; /* 淡入上移動畫效果 */
     white-space: nowrap;           /* 不換行，單行顯示打字效果 */
@@ -158,14 +173,14 @@
   flex-direction: column;    /* 整體排版方向：垂直 */
   align-items: center;        /* 讓內部內容水平置中 */
   justify-content: center; /* 增加垂直居中 */
-  padding: 90px 30px;        /* 上下內邊距 */
-  background: linear-gradient(to bottom, rgba(239, 225, 227, 0.1), rgba(20, 20, 20, 0.15)); /* 漸層背景 */
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  padding: 60px 20px;        /* (前面的值控制卡片的垂直高度)上下內邊距 */
+  background: linear-gradient(to bottom, rgba(235, 204, 207, 0.1), rgba(26, 26, 26, 0.15)); /* 漸層背景 */
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   border-radius: 30px;
   max-width: 1200px;  /* 最大寬度 */
   width: 90%; /* 寬度佔滿90% */
-  margin: 40px auto; /* 上下外邊距，並置中 */
+  margin: 20px auto; /* 上下外邊距，並置中 */
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); /* 卡片陰影 */
   
   /* 動畫初始狀態 */
@@ -200,19 +215,21 @@
 /* 作者名稱 */ .author-name {
   font-size: 50px;
   font-weight: 700;   /* 粗體 */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 文字陰影 */
   color: #F2F2F2;
   margin-bottom: 6px;
 }
 /* 作者副標題 */ .author-subname {
   font-size: 40px;
   font-weight: 500; /* 中等粗細 */
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); /* 文字陰影 */
   color: #F2F2F2;
 }
 /* 作者介紹區塊(下半部區塊內容) */ .author-description {
   font-size: 20px;
   line-height: 1.6; /* 行距 */
   color: #D6D6D6;
-  max-width: 900px;
+  max-width: 850px;
   text-align: left; /* 左對齊 */
 }
 /* 作者介紹區塊(button內容) */ .author-subrow {
@@ -224,15 +241,16 @@
   padding: 0 0px;                  /* 左右內距可以微調對齊感 */
   margin-bottom: 8px;              /* 與下方描述區塊距離 */
 } .about-button {
-  padding: 10px 15px; /* 上下左右內邊距 */
+  padding: 9px 15px; /* 上下左右內邊距 */
   font-size: 20px; /* 字體大小 */
   font-weight: 550; /* 中等粗細 */
   color: #F2F2F2;  /* 按鈕文字顏色 */
-  background-color: #3A4D7E;  /* 按鈕背景色 */
+  background-color: #2F457F;  /* 按鈕背景色 */
   display: inline-block; /* 讓按鈕呈現為行內塊元素 */
   cursor: pointer; /* 鼠標變為手形 */
-  border-radius: 14px; /* 按鈕圓角 */
+  border-radius: 15px; /* 按鈕圓角 */
   text-decoration: none;  /* 無下劃線 */
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); /* 按鈕陰影 */
   transition: background-color 0.3s ease; /* 懸停時背景色變化動畫 */
 }
 .about-button:hover {
@@ -325,10 +343,14 @@
                                                                                                                                                                                 
                                                                                                                                                                                         
                                                                                                                                                                                                 
+                                                                                                                                                                                                    
+<script src="/js/build/libs/anime.min.js"></script>
+
+                                                                                                                                                                                                        
 
                                                                                                                                                                                                             <script id="hexo-configurations">
     window.config = {"hostname":"fengyenchia.github.io","root":"/","language":"zh-TW"};
-    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":"#F78736","default_mode":"light","dark_mode":{"enable":true,"default":"auto","position":"right"}},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":false},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":false,"preloader":{"enable":false,"custom_message":null},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null},"back_to_top":{"enable":true,"icon":"fa-solid fa-arrow-up","position":"right","offset":1000}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Welcome to YEN-CHIA's portfolio.","subtitle":{"text":["歡迎來到我的網站！","這裡是我的創作空間～","一起來探索吧！"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":120,"backing_speed":150,"starting_delay":100,"backing_delay":0,"loop":true,"smart_backspace":true},"text_color":{"light":"#F2F2F2","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","zhihu":null,"twitter":null,"email":"yanjia20050504@gmail.com","discord":"https://discordapp.com/users/842736469180678185"},"qrs":{"weixin":null}},"buttons":{"enable":true,"list":[{"text":"作品集","url":"/portfolio","icon":"fa-solid fa-briefcase"},{"text":"關於我","url":"/about","icon":"fa-solid fa-user"},{"text":"聯絡我","url":"/contact","icon":"fa-solid fa-envelope"}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"icon":"/images/小東西.svg","submenus":{"Me":"/about","Github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","discord":"https://discordapp.com/users/842736469180678185"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"作者介紹","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2025/6/20 12:00:00"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":"#F78736","default_mode":"light","dark_mode":{"enable":true,"default":"auto","position":"right"}},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":false},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":false,"preloader":{"enable":true,"custom_message":"Loading to YEN CHIA's Page...","background":{"enable":true,"image":"/images/ocean_light.png"},"icon":{"enable":true,"image":"/images/loading_new.svg"}},"open_graph":{"enable":true,"image":"/images/ocean_2.png","description":"Welcome to YENCHIA'S page."},"google_analytics":{"enable":false,"id":null},"back_to_top":{"enable":true,"icon":"fa-solid fa-arrow-up","position":"right","offset":1000}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Welcome to YEN-CHIA's portfolio.","subtitle":{"text":["歡迎來到我的網站！","這裡是我的創作空間～","一起來探索吧！"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":120,"backing_speed":150,"starting_delay":100,"backing_delay":0,"loop":true,"smart_backspace":true},"text_color":{"light":"#F2F2F2","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","zhihu":null,"twitter":null,"email":"yanjia20050504@gmail.com","discord":"https://discordapp.com/users/842736469180678185"},"qrs":{"weixin":null}},"buttons":{"enable":true,"list":[{"text":"作品集","url":"/portfolio","icon":"fa-solid fa-briefcase"},{"text":"關於我","url":"/about","icon":"fa-solid fa-user"},{"text":"聯絡我","url":"/contact","icon":"fa-solid fa-envelope"}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"icon":"/images/小東西.svg","submenus":{"Me":"/about","Github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","discord":"https://discordapp.com/users/842736469180678185"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"作者介紹","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2025/6/20 12:00:00"};
     window.lang_ago = {"second":"%s 秒前","minute":"%s 分鐘前","hour":"%s 小時前","day":"%s 天前","week":"%s 週前","month":"%s 個月前","year":"%s 年前"};
     window.data = {"masonry":false};
   </script>
@@ -377,6 +399,153 @@
 	
 </div>
 	
+		<style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        Loading to YEN CHIA&#39;s Page...
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({ loop: true })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [20, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                filter: ['blur(5px)', 'blur(0px)'],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 300 + 20 * i,
+            })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [0, -20],
+                opacity: [1, 0],
+                filter: ['blur(0px)', 'blur(5px)'],
+                easing: "easeInExpo",
+                duration: 1000,
+                delay: (el, i) => 15 * i,
+                complete: function() {
+                    hidePreloader();
+                }
+            }, '-=700');
+
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+			
 				<main class="page-container" id="swup">
 
 					
@@ -969,10 +1138,6 @@
 
 
 
-
-
-    
-<script src="/js/build/libs/anime.min.js"></script>
 
 
 
