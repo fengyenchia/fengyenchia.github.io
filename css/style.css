@@ -6166,3 +6166,70 @@ html.is-animating .transition-fade-down {
   color: var(--second-text-color);
   text-align: center;
 }
+.post-meta-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+  padding: 0px 5px;
+  font-size: 1.1rem;
+  font-family: 'Source Han Sans', 'Noto Sans CJK SC', 'Noto Sans CJK TC', 'Noto Sans CJK JP', 'Microsoft JhengHei', 'PingFang TC', 'PingFang SC', 'Heiti TC', 'Heiti SC', Arial, sans-serif;
+  font-weight: 700;
+  color: var(--second-text-color);
+}
+.post-meta-footer .meta-item span {
+  display: inline-block;
+}
+.post-meta-footer .date-updated {
+  text-align: right;
+}
+.pro-copyright-card {
+  margin-top: 10px;
+  padding: 25px 35px;
+  background: #f7f7f7;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.pro-copyright-card::after {
+  content: '©';
+  position: absolute;
+  right: -20px;
+  bottom: -100px;
+  font-size: 200px;
+  font-weight: 900;
+  color: rgba(0,0,0,0.04);
+  z-index: 1;
+  pointer-events: none;
+}
+.description-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #5e5a5a;
+  flex-shrink: 0;
+}
+.content-wrapper {
+  flex-grow: 1;
+  text-align: left;
+}
+.content-wrapper .main-copyright-line {
+  font-size: 1rem;
+  font-family: 'Noto Sans CJK SC', 'Noto Sans CJK TC', 'Noto Sans CJK JP', 'Microsoft JhengHei', font-weight 500;
+  color: #555;
+  margin: 0 0 8px 0;
+}
+.content-wrapper .main-copyright-line-2 {
+  font-size: 1rem;
+  font-family: 'Noto Sans CJK SC', 'Noto Sans CJK TC', 'Noto Sans CJK JP', 'Microsoft JhengHei', font-weight 1200;
+  color: #555;
+  margin: 0 0 0px 0;
+}
+.content-wrapper .main-copyright-line-2 .description-text {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #555;
+}
