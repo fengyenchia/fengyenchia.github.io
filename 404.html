@@ -152,6 +152,7 @@
   }
 </style>
 <!-- (作者頭像 漂浮動畫) --> <style>
+  /* 首頁啟用動畫 */
   .avatar > img {       
     width: 150px !important;
     height: 150px !important;
@@ -168,9 +169,6 @@
     100% { transform: translateY(0); }
   }
 </style>
-
-
-
 <!-- 向下滾動箭頭 --> <style>
   /* --- 1. 客製化向下滾動箭頭 --- */
   .custom-scroll-down-indicator {
@@ -226,8 +224,7 @@
     color: #7eada1;
     transform: scale(1.18); /* 懸停時放大 */
   }
-</style>
-<!-- (------------------more頁面裡面的文字------------------) -->
+</style>     
 
                                                                                                                 
                                                                                                                     
@@ -262,7 +259,7 @@
 
                                                                                                                                                                                                             <script id="hexo-configurations">
     window.config = {"hostname":"fengyenchia.github.io","root":"/","language":"zh-TW","path":"search.json"};
-    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#23363e","secondary":"#F78736","default_mode":"light","dark_mode":{"enable":true,"default":"auto","position":"right"}},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":false,"background":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":false,"preloader":{"enable":true,"custom_message":"Loading..."},"open_graph":{"enable":true,"image":"/images/ocean_2.png","description":"Welcome to YENCHIA'S page."},"google_analytics":{"enable":false,"id":null},"back_to_top":{"enable":true,"icon":"fa-solid fa-arrow-up","position":"right","offset":1000}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/ocean_light_new.png","dark":"/images/ocean_dark_new.png"},"title":"<span class=\"custom-banner-title\">Welcome To My Page.</span>","subtitle":{"text":["歡迎來到我的網站！","這裡是我的創作空間～","一起來探索吧！"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":120,"backing_speed":150,"starting_delay":100,"backing_delay":0,"loop":true,"smart_backspace":true},"text_color":{"light":"#F2F2F2","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","zhihu":null,"twitter":null,"email":"mailto:yanjia20050504@gmail.com","discord":"https://discordapp.com/users/842736469180678185"},"qrs":{"weixin":null}},"buttons":{"enable":true,"list":[{"text":"作品集","url":"/portfolio","icon":"fa-solid fa-briefcase"},{"text":"關於我","url":"/about","icon":"fa-solid fa-user"},{"text":"聯絡我","url":"/contact","icon":"fa-solid fa-envelope"}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#7eada1","right":"#39535c","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Status":{"path":"https://status.ohevan.com/","icon":"fa-regular fa-chart-bar"},"Links":{"icon":"fa-regular fa-link","submenus":{"Link1":"/link1","Link2":"/link2","Link3":"/link3"}},"About":{"icon":"fa-regular fa-address-card","submenus":{"Me":"/more","Github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","discord":"https://discordapp.com/users/842736469180678185","Email":"mailto:yanjia20050504@gmail.com"}}},"search":{"enable":true,"preload":true,"icon":"fa-regular fa-search","limit":10,"style":"card","card":{"image":true,"excerpt":true,"categories":true,"tags":true,"other":true}}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"作者介紹","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2025/6/20 12:00:00"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":true,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#23363e","secondary":"#F78736","default_mode":"light","dark_mode":{"enable":true,"default":"auto","position":"right"}},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":false,"background":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":false,"preloader":{"enable":true,"custom_message":"Loading..."},"open_graph":{"enable":true,"image":"/images/ocean_2.png","description":"Welcome to YENCHIA'S page."},"google_analytics":{"enable":false,"id":null},"back_to_top":{"enable":true,"icon":"fa-solid fa-arrow-up","position":"right","offset":1000}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/ocean_light_new.png","dark":"/images/ocean_dark_new.png"},"title":"<span class=\"custom-banner-title\">Welcome To My Page.</span>","subtitle":{"text":["歡迎來到我的網站！","這裡是我的創作空間～","一起來探索吧！"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":120,"backing_speed":150,"starting_delay":100,"backing_delay":0,"loop":true,"smart_backspace":true},"text_color":{"light":"#F2F2F2","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","zhihu":null,"twitter":null,"email":"mailto:yanjia20050504@gmail.com","discord":"https://discordapp.com/users/842736469180678185"},"qrs":{"weixin":null}},"buttons":{"enable":true,"list":[{"text":"作品集","url":"/portfolio","icon":"fa-solid fa-briefcase"},{"text":"關於我","url":"/about","icon":"fa-solid fa-user"},{"text":"聯絡我","url":"/contact","icon":"fa-solid fa-envelope"}]}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#7eada1","right":"#39535c","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Status":{"path":"https://status.ohevan.com/","icon":"fa-regular fa-chart-bar"},"Links":{"icon":"fa-regular fa-link","submenus":{"Link1":"/link1","Link2":"/link2","Link3":"/link3"}},"About":{"icon":"fa-regular fa-address-card","submenus":{"Me":"/more","Github":"https://github.com/fengyenchia/fengyenchia.github.io.git","instagram":"https://www.instagram.com/yenchia._.0504/?hl=zh-tw","discord":"https://discordapp.com/users/842736469180678185","Email":"mailto:yanjia20050504@gmail.com"}}},"search":{"enable":true,"preload":true,"icon":"fa-regular fa-search","limit":10,"style":"card","card":{"image":true,"excerpt":true,"categories":true,"tags":true,"other":true}}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"作者介紹","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2025/6/20 12:00:00"};
     window.lang_ago = {"second":"%s 秒前","minute":"%s 分鐘前","hour":"%s 小時前","day":"%s 天前","week":"%s 週前","month":"%s 個月前","year":"%s 年前"};
     window.data = {"masonry":false};
   </script>
@@ -342,7 +339,7 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        /* Tailwind 'gap-4' is 1rem */
+        /* Tailwind 'gap-4' is 1rem; */
         align-items: center;
         justify-content: center;
         position: fixed;
@@ -355,6 +352,7 @@
         height: 100vh;
         /* 'h-screen' is 100% of the viewport height */
         background-color: var(--preloader-background-color);
+        background-image: linear-gradient(135deg, #b6ffed 0%, #80b8ca 100%);
         z-index: 1100;
         /* 'z-[1100]' sets the z-index */
         transition: opacity 0.2s ease-in-out;
@@ -387,77 +385,92 @@
         Loading...
     </h2>
     <script>
-        var textWrapper = document.querySelector('.ml13');
-        // Split text into words
-        var words = textWrapper.textContent.trim().split(' ');
+        // 1. [關鍵修改] 判斷當前頁面是否為首頁
+        //    config.root 是 Hexo 注入的全域變數，代表網站的根路徑 (通常是 "/")
+        const isHomePage = window.location.pathname === config.root;
 
-        // Clear the existing content
-        textWrapper.innerHTML = '';
+        if (isHomePage) {
+            // --- 如果是首頁，才執行所有動畫邏輯 ---
 
-        // Wrap each word and its letters in spans
-        words.forEach(function (word) {
-            var wordSpan = document.createElement('span');
-            wordSpan.classList.add('word');
-            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
-            textWrapper.appendChild(wordSpan);
-            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
-        });
+            // 2. 原始的文字分割和動畫初始化程式碼 (保持不變)
+            var textWrapper = document.querySelector('.ml13');
+            var words = textWrapper.textContent.trim().split(' ');
+            textWrapper.innerHTML = '';
+            words.forEach(function (word) {
+                var wordSpan = document.createElement('span');
+                wordSpan.classList.add('word');
+                wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+                textWrapper.appendChild(wordSpan);
+                textWrapper.appendChild(document.createTextNode(' '));
+            });
 
-        var animation = anime.timeline({ loop: true })
-            .add({
-                targets: '.ml13 .letter',
-                translateY: [20, 0],
-                translateZ: 0,
-                opacity: [0, 1],
-                filter: ['blur(5px)', 'blur(0px)'],
-                easing: "easeOutExpo",
-                duration: 1200,
-                delay: (el, i) => 300 + 20 * i,
-            })
-            .add({
-                targets: '.ml13 .letter',
-                translateY: [0, -20],
-                opacity: [1, 0],
-                filter: ['blur(0px)', 'blur(5px)'],
-                easing: "easeInExpo",
-                duration: 1000,
-                delay: (el, i) => 15 * i,
-                complete: function () {
-                    hidePreloader();
+            var animation = anime.timeline({ loop: true })
+                .add({
+                    targets: '.ml13 .letter',
+                    translateY: [20, 0],
+                    translateZ: 0,
+                    opacity: [0, 1],
+                    filter: ['blur(5px)', 'blur(0px)'],
+                    easing: "easeOutExpo",
+                    duration: 1200,
+                    delay: (el, i) => 300 + 20 * i,
+                })
+                .add({
+                    targets: '.ml13 .letter',
+                    translateY: [0, -20],
+                    opacity: [1, 0],
+                    filter: ['blur(0px)', 'blur(5px)'],
+                    easing: "easeInExpo",
+                    duration: 1000,
+                    delay: (el, i) => 15 * i,
+                }, '-=700');
+
+
+            // 3. 處理深色模式的顏色 (保持不變)
+            let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+            if (themeStatus === undefined || themeStatus === null) {
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    themeStatus = 'dark';
+                } else {
+                    themeStatus = 'light';
                 }
-            }, '-=700');
-
-
-        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
-
-        // If the theme status is not found in local storage, check the preferred color scheme
-        if (themeStatus === undefined || themeStatus === null) {
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                themeStatus = 'dark';
-            } else {
-                themeStatus = 'light';
             }
-        }
+            if (themeStatus) {
+                document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+                document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+            } else {
+                document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+                document.documentElement.style.setProperty('--preloader-text-color', '#000');
+            }
 
-        // Now you can use the themeStatus variable in your code
-        if (themeStatus) {
-            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
-            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+            // 4. 動畫結束或超時後隱藏 preloader 的函式
+            let preloaderHidden = false;
+            function hidePreloader() {
+                if (preloaderHidden) return;
+                preloaderHidden = true;
+
+                var preloader = document.querySelector('.preloader');
+                if (preloader) {
+                    preloader.style.opacity = '0';
+                    setTimeout(function () {
+                        preloader.style.display = 'none';
+                    }, 200); // 等待淡出動畫完成
+                }
+            }
+
+            animation.complete = hidePreloader;
+
+            // 5. 頁面載入完成後，確保 preloader 會被隱藏
+            window.addEventListener('load', function () {
+                setTimeout(hidePreloader, 2500); // 設定一個最長等待時間，例如 2.5 秒
+            });
+
         } else {
-            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
-            document.documentElement.style.setProperty('--preloader-text-color', '#000');
-        }
-
-        window.addEventListener('load', function () {
-            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
-        });
-
-        function hidePreloader() {
-            var preloader = document.querySelector('.preloader');
-            preloader.style.opacity = '0';
-            setTimeout(function () {
+            // --- 如果不是首頁，直接隱藏 preloader ---
+            const preloader = document.querySelector('.preloader');
+            if (preloader) {
                 preloader.style.display = 'none';
-            }, 200);
+            }
         }
     </script>
 </div>
@@ -831,11 +844,11 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
         <div class="label text-third-text-color text-sm">標籤</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">1</div>
         <div class="label text-third-text-color text-sm">分類</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
@@ -1085,7 +1098,7 @@
 
 
 <style>
-    /* --- 方案一：現代漸層 & 毛玻璃頁尾 --- */
+    /* --- 現代漸層 & 毛玻璃頁尾 --- */
     footer.footer {
         background: linear-gradient(135deg, rgba(126, 173, 161, 0.65), rgba(57, 83, 92, 0.65)) !important;
 

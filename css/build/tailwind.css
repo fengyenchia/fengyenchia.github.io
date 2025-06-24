@@ -1124,7 +1124,7 @@ video {
 }
 
 .border {
-    border-width: 1px
+    border-width: 1.5px
 }
 
 .border-b {
@@ -1151,8 +1151,16 @@ video {
     border-style: solid
 }
 
+.border-border-color-avatar {
+    border-color: #e5e7eb;
+    background-image: url(/images/小東西.svg);
+    background-repeat: no-repeat;
+}
+
 .border-border-color {
-    border-color: var(--border-color)
+    border-color: #e5e7eb;
+    background-image: none;
+    background-repeat: no-repeat;
 }
 
 .border-shadow-color-1 {
@@ -1524,7 +1532,7 @@ video {
 
 .shadow-shadow-color-2 {
     --tw-shadow-color: var(--shadow-color-2);
-    --tw-shadow: var(--tw-shadow-colored)
+    --tw-shadow: var(--tw-shadow-colored);
 }
 
 .blur {
@@ -1938,8 +1946,9 @@ video {
     }
 
     .md\:text-3xl {
-        font-size: 1.875rem;
-        line-height: 2.25rem
+        font-size: 1.8rem;
+        line-height: 1.5rem;
+        padding-left: 1.4rem;
     }
 
     .md\:text-5xl {
@@ -1948,8 +1957,9 @@ video {
     }
 
     .md\:text-6xl {
-        font-size: 3.75rem;
-        line-height: 1
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.2
     }
 
     .md\:text-sm {
