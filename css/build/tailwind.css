@@ -1123,6 +1123,10 @@ video {
     border-top-left-radius: 0
 }
 
+.border-page-title {
+    border-width: 0px
+}
+
 .border {
     border-width: 1.5px
 }
