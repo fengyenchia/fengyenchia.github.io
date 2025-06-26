@@ -2483,7 +2483,7 @@ html.is-animating .scroll-progress-bar {
   content: attr(data-weight);
   font-size: 1.5rem;
   background-color: var(--third-background-color);
-  padding: 4px 8px;
+  padding: 4px 10px;
   min-width: 35px;
   margin-left: 10px;
   border-radius: 9px;
@@ -4721,9 +4721,9 @@ html.is-animating .transition-fade-down {
 .category-list-content .all-category-list>.all-category-list-item {
   font-size: 1.5rem;
   font-weight: 600;
-  padding: 28px;
+  padding: 20px;
   cursor: pointer;
-  width: 40%;
+  width: 14%;
   background-color: var(--second-background-color);
   border-radius: 14px;
   box-shadow: var(--redefine-box-shadow-flat);
@@ -4755,12 +4755,9 @@ html.is-animating .transition-fade-down {
   border-radius: 9px;
   border: solid 1px var(--border-color);
 }
-.category-list-content .all-category-list>.all-category-list-item>.all-category-list-link {
-  border-bottom: 2px solid var(--border-color);
-}
 .category-list-content .all-category-list>.all-category-list-item>.all-category-list-child {
   font-weight: 550;
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-left: 20px;
   border-left: 2px solid var(--border-color);
   padding-left: 16px;
@@ -4779,7 +4776,7 @@ html.is-animating .transition-fade-down {
 }
 .category-list-content .all-category-list>.all-category-list-item>.all-category-list-child>li>.all-category-list-child {
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   margin-left: 20px;
   margin-top: 15px;
   border-left: 2px solid var(--border-color);
@@ -5313,7 +5310,7 @@ html.is-animating .transition-fade-down {
   font-size: 2.8rem;
   font-weight: 600;
   padding-bottom: 20px;
-  margin-bottom: 38px;
+  margin-bottom: 30px;
   border-bottom: 1px solid var(--shadow-color-1);
 }
 .category-name i {

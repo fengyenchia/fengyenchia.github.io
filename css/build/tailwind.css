@@ -1211,6 +1211,11 @@ video {
     background-color: var(--third-background-color)
 }
 
+.bg-fourth-background-color {
+    background-color: #E4EBEC
+}
+
+
 .bg-third-text-color {
     background-color: var(--third-text-color)
 }
