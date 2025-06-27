@@ -139,6 +139,10 @@
   --redefine-box-shadow-flat-hover: var(--shadow-color-2) 0px 1px 4px 0px, var(--shadow-color-1) 0px 0px 0px 1px, var(--shadow-color-1) 0px 0px 0px 1px inset;
   --mermaid-theme: $dark-mermaid-theme;
 }
+.tag-container {
+  font-size: 2.8rem;
+  font-weight: 600;
+}
 .tag-container .tag-name {
   color: var(--second-text-color);
   font-size: 3rem;

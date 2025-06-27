@@ -854,7 +854,7 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">8</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">9</div>
         <div class="label text-third-text-color text-sm">標籤</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
@@ -862,7 +862,7 @@
         <div class="label text-third-text-color text-sm">分類</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">7</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -887,20 +887,12 @@
 	
 	<h1 class="page-title-header">
 	
-    <i class="fa-solid fa-folders"></i> 
+    <i class="fa-solid fa-folder-tree"></i> 
 	categories
 </h1>
 <div class="category-list-content">
-	<!-- <ul class="all-category-list"><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/%E4%BD%9C%E5%93%81/">作品</a><span class="all-category-list-count">1</span></li><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/%E6%96%87%E7%AB%A0/">文章</a><span class="all-category-list-count">2</span></li><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><span class="all-category-list-count">2</span></li></ul> -->
+	<!-- <ul class="all-category-list"><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/%E4%BD%9C%E5%93%81/">作品</a><span class="all-category-list-count">3</span></li><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/%E6%96%87%E7%AB%A0/">文章</a><span class="all-category-list-count">2</span></li><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><span class="all-category-list-count">2</span></li></ul> -->
 	<ul class="all-category-list">
-		
-			<li class="all-category-list-item">
-				
-				<a href="/categories/%E6%96%87%E7%AB%A0/">
-					<span class="category-list-name">文章</span>
-					<span class="category-list-count text-lg md:text-xl font-semibold rounded-small bg-fourth-background-color py-[2px] px-[10px] border border-border-color">2</span>
-				</a>
-			</li>
 		
 			<li class="all-category-list-item">
 				
@@ -912,9 +904,17 @@
 		
 			<li class="all-category-list-item">
 				
+				<a href="/categories/%E6%96%87%E7%AB%A0/">
+					<span class="category-list-name">文章</span>
+					<span class="category-list-count text-lg md:text-xl font-semibold rounded-small bg-fourth-background-color py-[2px] px-[10px] border border-border-color">2</span>
+				</a>
+			</li>
+		
+			<li class="all-category-list-item">
+				
 				<a href="/categories/%E4%BD%9C%E5%93%81/">
 					<span class="category-list-name">作品</span>
-					<span class="category-list-count text-lg md:text-xl font-semibold rounded-small bg-fourth-background-color py-[2px] px-[10px] border border-border-color">1</span>
+					<span class="category-list-count text-lg md:text-xl font-semibold rounded-small bg-fourth-background-color py-[2px] px-[10px] border border-border-color">3</span>
 				</a>
 			</li>
 		
@@ -975,9 +975,9 @@
                             
                                 
                                     <p class="post-count space-x-0.5">
-                                        <span>共 5 篇文章</span>
+                                        <span>共 7 篇文章</span>
                                         
-                                            <span>共 4.6k 字</span>
+                                            <span>共 6k 字</span>
                                             
                                     </p>
                                     
@@ -1091,7 +1091,7 @@
     }
   });
 </script>
-<!-- (作者介紹區塊動畫) --> <script>
+<!-- (毛玻璃卡片-作者介紹) --> <script>
   document.addEventListener("DOMContentLoaded", function () {
   
     // 1. 處理作者介紹區塊的滾動和淡入動畫
@@ -1099,7 +1099,7 @@
     const arrow = document.querySelector(".custom-scroll-down-indicator");
 
 
-    // [關鍵修改] 為箭頭綁定新的、精準的滾動事件
+    // 為箭頭綁定新的、精準的滾動事件
     if (arrow && authorSection) {
       arrow.addEventListener("click", e => {
         e.preventDefault();

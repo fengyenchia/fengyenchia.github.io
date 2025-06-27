@@ -852,7 +852,7 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">8</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">9</div>
         <div class="label text-third-text-color text-sm">標籤</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
@@ -860,7 +860,7 @@
         <div class="label text-third-text-color text-sm">分類</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">7</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -936,9 +936,9 @@
                             
                                 
                                     <p class="post-count space-x-0.5">
-                                        <span>共 5 篇文章</span>
+                                        <span>共 7 篇文章</span>
                                         
-                                            <span>共 4.6k 字</span>
+                                            <span>共 6k 字</span>
                                             
                                     </p>
                                     
@@ -1052,7 +1052,7 @@
     }
   });
 </script>
-<!-- (作者介紹區塊動畫) --> <script>
+<!-- (毛玻璃卡片-作者介紹) --> <script>
   document.addEventListener("DOMContentLoaded", function () {
   
     // 1. 處理作者介紹區塊的滾動和淡入動畫
@@ -1060,7 +1060,7 @@
     const arrow = document.querySelector(".custom-scroll-down-indicator");
 
 
-    // [關鍵修改] 為箭頭綁定新的、精準的滾動事件
+    // 為箭頭綁定新的、精準的滾動事件
     if (arrow && authorSection) {
       arrow.addEventListener("click", e => {
         e.preventDefault();

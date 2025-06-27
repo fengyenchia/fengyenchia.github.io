@@ -2503,6 +2503,7 @@ html.is-animating .scroll-progress-bar {
 .tagcloud-content .tags-punctuation li a,
 .tagcloud-content .tag-list li a {
   font-size: 1.4rem;
+  font-weight: 500;
   opacity: var(--opacity);
   padding: 0.9rem 1.4rem;
   display: block;
@@ -5327,6 +5328,8 @@ html.is-animating .transition-fade-down {
   }
 }
 .tag-container {
+  font-size: 2.8rem;
+  font-weight: 600;
   padding: 30px;
   border-radius: 18px;
   box-sizing: border-box;
