@@ -292,7 +292,6 @@ body {
   margin: 0;
   padding: 0;
   color: var(--default-text-color);
-  background: var(--background-color);
   font-family: Geist Variable, Noto Sans SC, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial;
   font-weight: 400;
   font-size: 16px;
@@ -1823,6 +1822,10 @@ pre .deletion {
   transition-duration: 0.2s, 0.2s, 0.2s, 0.2s, 0.2s, 0.2s, 0.2s;
   transition-timing-function: ease, ease, ease, ease, ease, ease, ease;
 }
+html.dark .navbar-container .right .desktop .navbar-list .navbar-item a::after,
+html.dark .navbar-container .right .desktop .navbar-list .navbar-item .active::after {
+  background: #cbcbd1;
+}
 .navbar-shrink .navbar-container .right .desktop .navbar-list .navbar-item a::after,
 .navbar-shrink .navbar-container .right .desktop .navbar-list .navbar-item .active::after {
   bottom: -8.2px;
@@ -2319,6 +2322,9 @@ html.is-animating .transition-navbar {
   color: var(--background-color);
   background: var(--primary-color);
 }
+html.dark .paginator span.current {
+  color: #cbcbd1 !important;
+}
 .paginator i.fa-regular {
   color: var(--default-text-color);
 }
@@ -2576,39 +2582,50 @@ html.is-animating .scroll-progress-bar {
   font-size: 0.92rem;
   box-sizing: border-box;
   font-family: 'Geist Variable', 'Noto Sans SC', 'Noto Sans', 'Noto Sans SC', sans-serif;
+/* 使用帶有透明度的白色 rgba(紅, 綠, 藍, 透明度) */
+  background-color: #fff;
+/* 淺色模式背景 */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: background-color 0.3s ease; /* 加上過渡動畫，切換模式時更平滑 */
 }
-.post-toc-wrap .post-toc .toc-title {
+html.dark .post-toc-wrap {
+  background-color: #2c2c2c; /* 深灰色背景 */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* 陰影也可以微調 */
+}
+.post-toc .toc-title {
   font-size: 0.8rem;
   color: var(--default-text-color);
   font-weight: 540;
   margin-bottom: 0.3rem;
 }
-.post-toc-wrap .post-toc .page-title {
+.post-toc .page-title {
   white-space: normal;
   font-size: 1.2rem;
   color: var(--second-text-color);
   font-weight: bold;
   margin-bottom: 0.6rem;
 }
-.post-toc-wrap .post-toc ol {
+.post-toc ol {
   list-style: none;
   margin: 0;
   padding: 0 2px 12px 10px;
   text-align: left;
 }
-.post-toc-wrap .post-toc ol ol {
+.post-toc ol ol {
   border-left: 2px dotted var(--shadow-color-1);
 }
-.post-toc-wrap .post-toc ol:last-child {
+.post-toc ol:last-child {
   padding-bottom: 0;
 }
-.post-toc-wrap .post-toc ol > ol {
+.post-toc ol > ol {
   padding-left: 0;
 }
-.post-toc-wrap .post-toc ol a {
+.post-toc ol a {
   transition-property: all;
 }
-.post-toc-wrap .post-toc .nav-item {
+.post-toc .nav-item {
   line-height: 2;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2616,7 +2633,7 @@ html.is-animating .scroll-progress-bar {
   font-size: 0.9rem;
   transition: all 0.3s ease;
 }
-.post-toc-wrap .post-toc .nav-item a > span:first-child::before {
+.post-toc .nav-item a > span:first-child::before {
   content: ' ';
   width: 10px;
   height: 1.7rem;
@@ -2629,20 +2646,20 @@ html.is-animating .scroll-progress-bar {
   opacity: 0;
   transition: all 0.1s linear;
 }
-.post-toc-wrap .post-toc .nav .nav-child {
+.post-toc .nav .nav-child {
   display: block;
 }
-.post-toc-wrap .post-toc .nav .active > .nav-child {
+.post-toc .nav .active > .nav-child {
   display: block;
 }
-.post-toc-wrap .post-toc .nav .active-current > .nav-child {
+.post-toc .nav .active-current > .nav-child {
   display: block;
 }
-.post-toc-wrap .post-toc .nav .active-current > .nav-child > .nav-item {
+.post-toc .nav .active-current > .nav-child > .nav-item {
   display: block;
 }
-.post-toc-wrap .post-toc .nav .nav-number,
-.post-toc-wrap .post-toc .nav .nav-text {
+.post-toc .nav .nav-number,
+.post-toc .nav .nav-text {
   color: var(--third-text-color);
   font-weight: 500;
   text-stroke: 0.03px #fff;
@@ -2650,18 +2667,22 @@ html.is-animating .scroll-progress-bar {
   padding-left: 0;
   transition: all 0.3s ease;
 }
-.post-toc-wrap .post-toc .nav .active > a .nav-number,
-.post-toc-wrap .post-toc .nav .active > a .nav-text {
+.post-toc .nav .active > a .nav-number,
+.post-toc .nav .active > a .nav-text {
   color: var(--primary-color);
   font-weight: bold;
 }
-.post-toc-wrap .post-toc .nav .active-current .nav-number,
-.post-toc-wrap .post-toc .nav .active-current .nav-text {
+.post-toc .nav .active-current .nav-number,
+.post-toc .nav .active-current .nav-text {
   color: var(--primary-color) !important;
   font-weight: bold;
   transition: all 0.3s ease;
 }
-.post-toc-wrap .post-toc .nav .active-current > span:first-child::before {
+html.dark .post-toc .nav .active-current .nav-number,
+html.dark .post-toc .nav .active-current .nav-text {
+  color: #fff !important;
+}
+.post-toc .nav .active-current > span:first-child::before {
   content: ' ';
   width: 10px;
   height: 1.7rem;
@@ -4432,8 +4453,11 @@ div.tabs .tab-content .tab-pane .note:last-child {
   width: 100%;
   height: auto;
   background: transparent;
-  animation: background-animation 15s infinite alternate;
+  animation: background-animation-light 15s infinite alternate;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%233a414c' fill-opacity='0.5' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E") !important;
+}
+html.dark .page-container {
+  animation-name: background-animation-dark;
 }
 @media (max-width: 768px) {
   .page-container {
@@ -4609,12 +4633,12 @@ div.tabs .tab-content .tab-pane .note:last-child {
     right: 12px;
   }
 }
-@-moz-keyframes background-animation {
+@-moz-keyframes background-animation-light {
   0% {
-    background-color: rgba(57,83,92,0.4);
+    background-color: rgba(57,83,92,0.4); /* 原始的半透明藍灰色 */
   }
   50% {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* 淺灰色 */
   }
   75% {
     background-color: rgba(57,83,92,0.4);
@@ -4623,12 +4647,12 @@ div.tabs .tab-content .tab-pane .note:last-child {
     background-color: #f2f2f2;
   }
 }
-@-webkit-keyframes background-animation {
+@-webkit-keyframes background-animation-light {
   0% {
-    background-color: rgba(57,83,92,0.4);
+    background-color: rgba(57,83,92,0.4); /* 原始的半透明藍灰色 */
   }
   50% {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* 淺灰色 */
   }
   75% {
     background-color: rgba(57,83,92,0.4);
@@ -4637,12 +4661,12 @@ div.tabs .tab-content .tab-pane .note:last-child {
     background-color: #f2f2f2;
   }
 }
-@-o-keyframes background-animation {
+@-o-keyframes background-animation-light {
   0% {
-    background-color: rgba(57,83,92,0.4);
+    background-color: rgba(57,83,92,0.4); /* 原始的半透明藍灰色 */
   }
   50% {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* 淺灰色 */
   }
   75% {
     background-color: rgba(57,83,92,0.4);
@@ -4651,18 +4675,78 @@ div.tabs .tab-content .tab-pane .note:last-child {
     background-color: #f2f2f2;
   }
 }
-@keyframes background-animation {
+@keyframes background-animation-light {
   0% {
-    background-color: rgba(57,83,92,0.4);
+    background-color: rgba(57,83,92,0.4); /* 原始的半透明藍灰色 */
   }
   50% {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* 淺灰色 */
   }
   75% {
     background-color: rgba(57,83,92,0.4);
   }
   100% {
     background-color: #f2f2f2;
+  }
+}
+@-moz-keyframes background-animation-dark {
+  0% {
+/* 在深色背景上，可以讓這個顏色稍微亮一點或換個色調 */
+    background-color: #131313;
+  }
+  50% {
+    background-color: #2c2c2c; /* 將刺眼的淺灰換成柔和的深灰 */
+  }
+  75% {
+    background-color: #131313;
+  }
+  100% {
+    background-color: #2c2c2c;
+  }
+}
+@-webkit-keyframes background-animation-dark {
+  0% {
+/* 在深色背景上，可以讓這個顏色稍微亮一點或換個色調 */
+    background-color: #131313;
+  }
+  50% {
+    background-color: #2c2c2c; /* 將刺眼的淺灰換成柔和的深灰 */
+  }
+  75% {
+    background-color: #131313;
+  }
+  100% {
+    background-color: #2c2c2c;
+  }
+}
+@-o-keyframes background-animation-dark {
+  0% {
+/* 在深色背景上，可以讓這個顏色稍微亮一點或換個色調 */
+    background-color: #131313;
+  }
+  50% {
+    background-color: #2c2c2c; /* 將刺眼的淺灰換成柔和的深灰 */
+  }
+  75% {
+    background-color: #131313;
+  }
+  100% {
+    background-color: #2c2c2c;
+  }
+}
+@keyframes background-animation-dark {
+  0% {
+/* 在深色背景上，可以讓這個顏色稍微亮一點或換個色調 */
+    background-color: #131313;
+  }
+  50% {
+    background-color: #2c2c2c; /* 將刺眼的淺灰換成柔和的深灰 */
+  }
+  75% {
+    background-color: #131313;
+  }
+  100% {
+    background-color: #2c2c2c;
   }
 }
 .transition-fade {
@@ -5167,7 +5251,7 @@ html.is-animating .transition-fade-down {
 .post-page-container .article-content-container .post-nav-title-item {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: pre-line;
 }
 @media (max-width: 768px) {
   .post-page-container .article-content-container .post-nav-title-item {
@@ -5277,7 +5361,6 @@ html.is-animating .transition-fade-down {
   overflow-y: auto;
   overflow-x: hidden;
   float: right;
-  padding: 10px;
   box-sizing: border-box;
   box-shadow: none !important;
   transition: opacity 0.3s ease-out 0.3s;
@@ -5561,6 +5644,9 @@ html.is-animating .transition-fade-down {
   align-items: center;
   gap: 30px;
 }
+html.dark .pro-copyright-card {
+  background: #cbcbd1 !important;
+}
 .pro-copyright-card::after {
   content: '©';
   position: absolute;
@@ -5572,11 +5658,15 @@ html.is-animating .transition-fade-down {
   z-index: 1;
   pointer-events: none;
 }
+html.dark .pro-copyright-card::after {
+  color: #bfbfc5 !important;
+}
 .description-text {
   font-size: 1.5rem;
   font-weight: 400;
   color: #5e5a5a;
   flex-shrink: 0;
+  z-index: 3;
 }
 .content-wrapper {
   flex-grow: 1;

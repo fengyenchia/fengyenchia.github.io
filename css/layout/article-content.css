@@ -279,7 +279,7 @@
 .post-page-container .article-content-container .post-nav-title-item {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: pre-line;
 }
 @media (max-width: 768px) {
   .post-page-container .article-content-container .post-nav-title-item {
@@ -369,7 +369,6 @@
   overflow-y: auto;
   overflow-x: hidden;
   float: right;
-  padding: 10px;
   box-sizing: border-box;
   box-shadow: none !important;
   transition: opacity 0.3s ease-out 0.3s;

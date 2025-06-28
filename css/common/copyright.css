@@ -27,6 +27,9 @@
   align-items: center;
   gap: 30px;
 }
+html.dark .pro-copyright-card {
+  background: #cbcbd1 !important;
+}
 .pro-copyright-card::after {
   content: '©';
   position: absolute;
@@ -38,11 +41,15 @@
   z-index: 1;
   pointer-events: none;
 }
+html.dark .pro-copyright-card::after {
+  color: #bfbfc5 !important;
+}
 .description-text {
   font-size: 1.5rem;
   font-weight: 400;
   color: #5e5a5a;
   flex-shrink: 0;
+  z-index: 3;
 }
 .content-wrapper {
   flex-grow: 1;

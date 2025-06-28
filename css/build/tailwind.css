@@ -1212,9 +1212,14 @@ video {
 }
 
 .bg-fourth-background-color {
-    background-color: #E4EBEC
+    background-color: #E4EBEC;
+    transition: background-color 0.3s ease; /* 加上過渡動畫，讓顏色變化更平滑 */
 }
-
+/* --- 黑暗模式下的覆寫 --- */
+/* 當 html 標籤有 class="dark" 時，覆寫這個工具類的背景色 */
+html.dark .bg-fourth-background-color {
+    background-color: #202124; /* 指定一個適合黑暗模式的顏色 */
+}
 
 .bg-third-text-color {
     background-color: var(--third-text-color)
@@ -1500,7 +1505,13 @@ video {
 
 .text-third-text-color {
     color: var(--third-text-color)
+    /* --- 黑暗模式下的覆寫 --- */
+/* 當 html 標籤有 class="dark" 時，覆寫這個工具類的背景色 */
 }
+
+html.dark .text-third-text-color {
+        color: #fff; /* 指定一個適合黑暗模式的顏色 */
+} 
 
 .underline {
     text-decoration-line: underline

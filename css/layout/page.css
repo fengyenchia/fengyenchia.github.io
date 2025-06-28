@@ -152,8 +152,11 @@
   width: 100%;
   height: auto;
   background: transparent;
-  animation: background-animation 15s infinite alternate;
+  animation: background-animation-light 15s infinite alternate;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%233a414c' fill-opacity='0.5' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E") !important;
+}
+html.dark .page-container {
+  animation-name: background-animation-dark;
 }
 @media (max-width: 768px) {
   .page-container {
@@ -317,12 +320,14 @@
     right: 12px;
   }
 }
-@-moz-keyframes background-animation {
+/* --- 1. 定義淺色模式的動畫 (您原本的動畫) --- */
+/* --- 2. 定義黑暗模式的動畫 --- */
+@-moz-keyframes background-animation-light {
   0% {
-    background-color: rgba(57,83,92,0.4);
+    background-color: rgba(57,83,92,0.4); /* 原始的半透明藍灰色 */
   }
   50% {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* 淺灰色 */
   }
   75% {
     background-color: rgba(57,83,92,0.4);
@@ -331,12 +336,12 @@
     background-color: #f2f2f2;
   }
 }
-@-webkit-keyframes background-animation {
+@-webkit-keyframes background-animation-light {
   0% {
-    background-color: rgba(57,83,92,0.4);
+    background-color: rgba(57,83,92,0.4); /* 原始的半透明藍灰色 */
   }
   50% {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* 淺灰色 */
   }
   75% {
     background-color: rgba(57,83,92,0.4);
@@ -345,12 +350,12 @@
     background-color: #f2f2f2;
   }
 }
-@-o-keyframes background-animation {
+@-o-keyframes background-animation-light {
   0% {
-    background-color: rgba(57,83,92,0.4);
+    background-color: rgba(57,83,92,0.4); /* 原始的半透明藍灰色 */
   }
   50% {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* 淺灰色 */
   }
   75% {
     background-color: rgba(57,83,92,0.4);
@@ -359,17 +364,77 @@
     background-color: #f2f2f2;
   }
 }
-@keyframes background-animation {
+@keyframes background-animation-light {
   0% {
-    background-color: rgba(57,83,92,0.4);
+    background-color: rgba(57,83,92,0.4); /* 原始的半透明藍灰色 */
   }
   50% {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* 淺灰色 */
   }
   75% {
     background-color: rgba(57,83,92,0.4);
   }
   100% {
     background-color: #f2f2f2;
+  }
+}
+@-moz-keyframes background-animation-dark {
+  0% {
+/* 在深色背景上，可以讓這個顏色稍微亮一點或換個色調 */
+    background-color: #131313;
+  }
+  50% {
+    background-color: #2c2c2c; /* 將刺眼的淺灰換成柔和的深灰 */
+  }
+  75% {
+    background-color: #131313;
+  }
+  100% {
+    background-color: #2c2c2c;
+  }
+}
+@-webkit-keyframes background-animation-dark {
+  0% {
+/* 在深色背景上，可以讓這個顏色稍微亮一點或換個色調 */
+    background-color: #131313;
+  }
+  50% {
+    background-color: #2c2c2c; /* 將刺眼的淺灰換成柔和的深灰 */
+  }
+  75% {
+    background-color: #131313;
+  }
+  100% {
+    background-color: #2c2c2c;
+  }
+}
+@-o-keyframes background-animation-dark {
+  0% {
+/* 在深色背景上，可以讓這個顏色稍微亮一點或換個色調 */
+    background-color: #131313;
+  }
+  50% {
+    background-color: #2c2c2c; /* 將刺眼的淺灰換成柔和的深灰 */
+  }
+  75% {
+    background-color: #131313;
+  }
+  100% {
+    background-color: #2c2c2c;
+  }
+}
+@keyframes background-animation-dark {
+  0% {
+/* 在深色背景上，可以讓這個顏色稍微亮一點或換個色調 */
+    background-color: #131313;
+  }
+  50% {
+    background-color: #2c2c2c; /* 將刺眼的淺灰換成柔和的深灰 */
+  }
+  75% {
+    background-color: #131313;
+  }
+  100% {
+    background-color: #2c2c2c;
   }
 }
